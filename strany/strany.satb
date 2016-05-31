@@ -1,0 +1,159 @@
+BB \version "2.11.41"
+BB #(set-global-staff-size 19)
+BB \header {
+BB   title = "Из страны, страны далёкой"
+BB   subtitle = "Старинная студенческая песня"
+BB   arranger = "Обработка A. Свешникова"
+BB   copyright=\markup\tiny\simple #(strftime "%x" (localtime(current-time)))
+BB }
+BB \paper {
+BB 	line-width = 175
+BB	%print-page-number = false
+BB 	#(set-paper-size "a4")
+BB 	page-top-space = 5
+BB	%annotate-spacing = ##t
+BB }
+
+sn sopranoNotes =
+an    altoNotes =
+tn   tenorNotes =
+bn    bassNotes =
+.n  \relative {
+.n    \set Staff.vocalName = 
+sn        "Сопрано"
+an        "Альты"
+tn        "Тенора"
+bn        "Басы"
+.n    \set Staff.shortVocalName =
+sn        "С"
+an        "А"
+tn        "Т"
+bn        "Б"
+.n    \key ees \major
+.n    \dynamicUp
+.n    \time 2/4
+.n    \autoBeamOff
+tn    \clef "treble_8"
+bn    \clef bass
+.n    \partial 4
+
+sl sopranoLyrics =
+al    altoLyrics =
+tl   tenorLyrics =
+bl    bassLyrics =
+.l  \lyrics {
+
+sn bes'8 bes | bes g aes bes | g g bes bes | bes g aes bes | g g bes bes |
+an g'8 g | g ees f g | ees ees g g | \break g ees f g | ees ees g g |
+tn bes8 bes | bes bes bes bes | bes bes bes bes |
+tn                                           bes bes bes bes | bes bes bes bes |
+bn ees,8 ees | ees ees bes bes | ees ees ees ees |
+bn                                           ees ees bes bes | ees ees ees ees |
+.l Из стра -- ны, стра -- ны  да -- лё -- кой, с_Вол -- ги
+.l ма -- туш -- ки  ши -- ро -- кой,  ра -- ди
+
+.n \time 3/4
+
+sn bes4. g8 aes bes | \break c2 c8 c |
+an g4. ees8 f g | aes2 aes8 aes |
+tn ees4. des8 c bes | c2 ees8 ees |
+bn ees4. ees8 ees ees | aes2 aes8 aes |
+.l слав -- но -- го  тру -- да,  ра -- ди
+
+.n \repeat volta 2 {
+.n \time 2/4
+
+sn c c c des | ees c c c | \pageBreak des c bes aes |
+an aes aes aes bes | c aes aes aes | bes aes g f |
+tn ees ees ees des | c ees ees ees | des c bes aes |
+bn aes aes aes aes | aes aes aes aes | bes aes g f |
+.l воль -- нос -- ти  ве -- сё -- лой  со -- бра -- ли -- ся  мы  сю --
+
+.n  } \alternative { {
+
+.n \time 3/4
+sn bes2 c8 c |
+an g2 aes8 aes |
+tn c2 ees8 ees |
+bn ees2 aes8 aes |
+.l да,  ра -- ди
+
+.n  } { %second alternative
+
+.n \time 3/4
+sn bes2 bes8 bes |
+an g2 g8 g |
+tn bes2 bes8 bes |
+bn ees2 ees8 ees |
+.l да.  2._Вспом -- ним
+
+.n  } } %end alternatives
+
+.n \break
+.n \override Staff.TimeSignature #'break-visibility = ##(#f #t #t)
+.n \time 3/4
+
+sn \set Score.repeatCommands = #'((volta "Для окончания"))
+sn bes4. g8 aes bes | \set Score.repeatCommands = #'((volta #f))
+an g4. ees8 f g |
+tn ees4. des8 c bes |
+bn ees4. ees8 ees ees |
+.l рёд!  Впе -- рёд,  впе --
+
+.n \time 2/4 
+
+sn c4. c8 | d4 f | ees2
+an aes4. aes8 | bes4 aes | g2
+tn c4. c8 | bes4 d | ees2
+bn aes4. aes8 | bes4 bes | <ees ees,>2
+.l рёд,  впе -- рёд,  впе -- рёд!
+
+.n \bar "|."
+.. }
+
+EE	\score { \new ChoirStaff <<
+EE		\new Voice = "soprano" \sopranoNotes
+EE		\new Lyrics \lyricsto soprano \sopranoLyrics
+EE		\new Voice = "alto" \altoNotes
+EE		\new Lyrics \lyricsto alto \altoLyrics
+EE              \new Voice = "tenor" \tenorNotes
+EE              \new Lyrics \lyricsto tenor \tenorLyrics
+EE              \new Voice = "bass" \bassNotes
+EE              \new Lyrics \lyricsto bass \bassLyrics
+EE	>> }
+EE	\markup {
+EE 	{ \column {
+EE 		\hspace #3.0 % adds vert. spacing before verses
+EE 		\line { \bold "1."
+EE			\hspace #0.1
+EE 			\column {
+EE 				"Из страны, страны далёкой,"
+EE 				"С Волги-матушки широкой"
+EE				"Ради славного труда,"
+EE				"Ради вольности весёлой"
+EE				"Собралися мы сюда."
+EE 			}
+EE 		}
+EE 		\hspace #0.1 % adds vert. spacing between verses
+EE 		\line { \bold "2."
+EE			\hspace #0.1
+EE 			\column {
+EE 				"Вспомним горы, вспомним долы,"
+EE 				"Наши нивы, наши сёлы,"
+EE				"И в краю, в краю чужом"
+EE				"Мы пируем пир весёлый"
+EE				"И за Родину мы пьём."
+EE 			}
+EE 		}
+EE 		\hspace #0.1 % adds vert. spacing between verses
+EE 		\line { \bold "3."
+EE			\hspace #0.1
+EE 			\column {
+EE 				"Пьём с надеждою чудесной"
+EE 				"Из бокалов полновесных"
+EE				"Первый тост за наш народ,"
+EE				"За святой девиз «Вперёд!»"
+EE 			}
+EE 		}
+EE 	} }
+EE }

@@ -1,0 +1,287 @@
+BB \version "2.11.41"
+
+BB #(set-global-staff-size 19)
+BB \header {
+BB   title = "Fair Phyllis I saw"
+BB   composer = "John Farmer"
+BB }
+BB \paper {
+BB 	line-width = 175
+BB 	#(set-paper-size "a4")
+BB 	%page-top-space = 5
+BB }
+
+BB \layout {
+BB  \context {
+BB   \Voice
+BB   \consists Ambitus_engraver
+BB  }
+BB }
+
+BB fthenp = \markup { {\dynamic f} \hspace #1. \italic { (\dynamic p second time) } }
+
+sn sopranoNotes =
+an    altoNotes =
+tn   tenorNotes =
+bn    bassNotes =
+.n  \relative {
+.n    \set Staff.vocalName = 
+sn        "Soprano"
+an        "Alto"
+tn        "Tenor"
+bn        "Bass"
+.n    \set Staff.shortVocalName =
+sn        "S"
+an        "A"
+tn        "T"
+bn        "B"
+.n    \key f \major
+.n    %\autoBeamOff
+.n    \dynamicUp
+.n    \time 2/2
+.n    \override Staff.TimeSignature #'style = #'()
+bn    \clef bass
+
+sl sopranoLyrics =
+al    altoLyrics =
+tl   tenorLyrics =
+bl    bassLyrics =
+.l  \lyrics {
+
+sn  f1^\fthenp
+sl  Fair
+
+.n  \repeat volta 2 {
+
+sn  a4. bes8 c4 c      | bes a   g   f    | c'2
+sl  Phyl -- lis  I saw  sit -- ting all a -- lone,
+
+an  R1 * 3 | r2
+mn  R1 * 3 | r2
+
+sn  c4. c8 | c4 d2 c4 | bes a g g |
+an  f4.^\fthenp f8 | f4 f2 f4 | f8 f f2 e4 |
+tn  a'4.^\fthenp a8 | a4 bes2 c4 | d8 d c2 c4 |
+bn  f,4.^\fthenp f8 | f4 bes,2 a4 | bes f c' c |
+.l  Feed -- ing  her flock near to the moun -- tain -- side.
+
+.n  } \alternative { {
+sn  a2 r4 f \p
+an  << f1 { s2 \> s4 s4 \! } >>
+tn  << c1 { s2 \> s4 s4 \! } >>
+bn  << f1 { s2 \> s4 s4 \! } >>
+.n  }
+
+sl  Fair
+
+.n  { %second alternative
+sn  a2 r4 f \f |
+an  f1
+tn  c1
+bn  f1
+.n  } } % end alternatives
+
+.l  side.
+
+sn  c'4. c8 a4 a8 c |
+an  r4 c4 \f f4. f8 |
+mn  R1
+
+.l  The shep -- herds  knew
+
+sn  bes4 a g8 f g g |
+an  d4 f e8 d e e |
+tn  r4 f, \f c'4. c8 |
+bn  r2 r4  c4 \f |
+
+sl  not, they knew
+tl  not, they knew
+.l  not  whi -- ther  she was gone,
+
+sn  a2 r | R1 |
+an  f2 r | r2 r4 f4 |
+tn  a4 a8 c bes4 a | g8 a bes g a2 |
+bn  f4. f8 d4 f | e8 f g e f2 |
+
+.l But  af -- ter  her  lov -- er,
+sl her lov -- er,
+tl her lov -- er,
+al her lov -- er,
+
+sn f4 a8 bes c4 c ~ | c8 g c4 c2 | a4 a c a8 d |
+an a8 bes c4 a f ~ | f4 e f2 | f4 f a f8 bes |
+tn r4 f a8 bes c4 | c4 g8 g a2 | c2 r2 |
+bn r2 f,4 a8 bes | c2 f2 ~ | f4 f, r2 |
+
+sn c4 a r2 | r4 c c b | << c1 { s2 \> s4 s4 \!} >> |
+an a4 f r2 | r4 f g4. f8 | << e2 { s4 \> s4 \! } >> r2 |
+tn r4 a c a8 d | c a c4 d d | c   c8 \p bes a4. g8 |
+bn r4 f' a f8 bes | a f a4 g g | << a,2 { s4 \> s4 \! } >>   r4 f'8 \p e |
+
+.l but af -- ter  her  lov -- er  A -- myn -- tas hied.
+
+sn r2 r4 d8 \p c | bes4. a8 g4 f |
+an r4 f8 \p e d2 | r4 d'8 c bes4. a8 |
+tn f2 f4 f'8 e | d2 r4 d8 c |
+bn d4. c8 bes2 ~ | bes4 bes bes2 |
+
+.l Up and
+al down, up and
+.l down he wan -- dered,
+
+sn r4 d'8 c bes4. a8 | g4 f r2 | r4 c'2 g4 | e4. f8 g4 g |
+an g4 f r d'8 c | bes4. a8 g4( f) | e2 r4 c'4 ~ | c g e4. f8 |
+tn bes4. a8 g4 f | r d'8 c bes4. a8 | g2 e | r4 c'2 g4 |
+
+wl up and down he wan -- dered, up and down he wan -- dered,
+tl up and down, up and down he wan -- dered, up and down he wan -- dered,
+
+sn r4 c8 c g4 a | e f g8 bes a4 | g f2( e4) |
+an g4 g r c8 c | g4 a e( f) | e c c2 |
+tn e4. f8 g4 e | r4 c'8 c g g a f | g bes a a g2 |
+
+sl up and down he  wan -- dered, up and down he  wan -- dered,
+al up and down he  wan -- dered, he wan -- dered.
+tl up and down he  wan -- dered, up and down he  wan -- dered,
+tl up and down he  wan -- dered
+
+bn bes1 bes c c c c c |
+bl he wan -- dered, up and down he wan -- dered,
+
+sn f2 r | r4 a \f a b | c g a2 \mf | g f | e1 |
+an c2 r | r4 f \f f d | c c r d \mf ~ | d8 c c2( b4) | c2 g' \p |
+tn f4 c' \f d e | f c r2 | r2 r4 a \mf | c g( a g8 f) | g2 c \p |
+bn f,4 f' \f bes g | f f r2 | r2 f2 \mf | e d | c2 c \p |
+
+.l whilst she was miss -- ing; when he found her,
+
+.n \time 3/4
+sn \mark \markup { [←\small { \note #"2" #1 = \note #"2." #1 }→] }
+
+sn R4 * 6
+an a2 g4 | f d2 |
+tn c2 c4 | d b2 |
+bn f2 e4 | d g2 |
+
+.n \time 2/2
+sn \mark \markup { [←\small { \note #"2." #1 = \note #"2" #1 }→] }
+
+sn << r2 { s4. s8 \p } >> c'2 |
+an e4 e g2 |
+tn c4 g g2 |
+bn c,4 c c2 |
+
+al O, then they fell a- kiss -- ing,
+tl O, then they fell a- kiss -- ing,
+bl O, then they fell a- kiss -- ing,
+
+.n \time 3/4
+sn \mark \markup { [←\small { \note #"2" #1 = \note #"2." #1 }→] }
+
+sn d2 c4 | bes4 g2 | a4. bes8 c4 | c4. bes8 a4 | g2 f4 | f e2 |
+an g4 f2 | g4 e2 | f4. g8 a4 | a4. g8 f4 | e2 c4 | d4 c2 |
+tn bes2 c4 | d4 c2 | c4. bes8 a4 | c c c | c2 a4 | bes4 g2 |
+bn bes2 a4 | g4 c2 | f,4 f f | f' f f | c2 f4 | bes,4 c2 |
+
+.l O, then they fell a- kiss -- ing, a- kiss -- ing,
+.l O, then they fell a- kiss -- ing.
+
+.n \time 2/2
+sn \mark \markup { [←\small { \note #"2." #1 = \note #"2" #1 }→] }
+
+sn f4 f r2 |
+an c2 c |
+tn a8 a c bes a4. g8 |
+bn f,2 f4 f'8 e |
+
+sn r2 r4 d'8 c | bes4. a8 g4 f |
+an r4 f8 e d2 | r4 d'8 c bes4. a8 |
+tn f2 f4 f'8 e | d2 r4 d8 c |
+bn d4. c8 bes2 ~ | bes4 bes bes2 |
+
+.l Up and
+al down, up and
+.l down he wan -- dered,
+
+sn r4 d'8 c bes4. a8 | g4 f r2 | r4 c'2 g4 | e4. f8 g4 g |
+an g4 f r d'8 c | bes4. a8 g4( f) | e2 r4 c'4 ~ | c g e4. f8 |
+tn bes4. a8 g4 f | r d'8 c bes4. a8 | g2 e | r4 c'2 g4 |
+
+wl up and down he wan -- dered, up and down he wan -- dered,
+tl up and down, up and down he wan -- dered, up and down he wan -- dered,
+
+sn r4 c8 c g4 a | e f g8 bes a4 | g f2( e4) |
+an g4 g r c8 c | g4 a e( f) | e c c2 |
+tn e4. f8 g4 e | r4 c'8 c g g a f | g bes a a g2 |
+
+sl up and down he  wan -- dered, up and down he  wan -- dered,
+al up and down he  wan -- dered, he wan -- dered.
+tl up and down he  wan -- dered, up and down he  wan -- dered,
+tl up and down he  wan -- dered
+
+bn bes1 bes c c c c c |
+bl he wan -- dered, up and down he wan -- dered,
+
+sn f2 r | r4 a \f a b | c g a2 \mf | g f | e1 |
+an c2 r | r4 f \f f d | c c r d \mf ~ | d8 c c2( b4) | c2 g' \p |
+tn f4 c' \f d e | f c r2 | r2 r4 a \mf | c g( a g8 f) | g2 c \p |
+bn f,4 f' \f bes g | f f r2 | r2 f2 \mf | e d | c2 c \p |
+
+.l whilst she was miss -- ing; when he found her,
+
+.n \time 3/4
+sn \mark \markup { [←\small { \note #"2" #1 = \note #"2." #1 }→] }
+
+sn R4 * 6
+an a2 g4 | f d2 |
+tn c2 c4 | d b2 |
+bn f2 e4 | d g2 |
+
+.n \time 2/2
+sn \mark \markup { [←\small { \note #"2." #1 = \note #"2" #1 }→] }
+
+sn << r2 {s4. s8 \p } >> c'2 |
+an e4 e g2 |
+tn c4 g g2 |
+bn c,4 c c2 |
+
+al O, then they fell a- kiss -- ing,
+tl O, then they fell a- kiss -- ing,
+bl O, then they fell a- kiss -- ing,
+
+.n \time 3/4
+sn \mark \markup { [←\small { \note #"2" #1 = \note #"2." #1 }→] }
+
+sn d2 c4 | bes4 g2 | a4. bes8 c4 | c4. bes8 a4 | g2 f4 | f e2 |
+an g4 f2 | g4 e2 | f4. g8 a4 | a4. g8 f4 | e2 c4 | d4 c2 |
+tn bes2 c4 | d4 c2 | c4. bes8 a4 | c c c | c2 a4 | bes4 g2 |
+bn bes2 a4 | g4 c2 | f,4 f f | f' f f | c2 f4 | bes,4 c2 |
+
+.l O, then they fell a- kiss -- ing, a- kiss -- ing,
+.l O, then they fell a- kiss -- ing.
+
+.n \time 2/2
+sn \mark \markup { [←\small { \note #"2." #1 = \note #"2" #1 }→] }
+
+sn f2 f |
+an c2 c |
+tn a2 a |
+bn f,2 f |
+
+.n \bar "|." }
+.l }
+
+EE	\score { \new ChoirStaff <<
+EE        \override Score.VerticalAxisGroup #'remove-first = ##t
+EE        \override Score.RehearsalMark
+EE		#'break-visibility = #begin-of-line-invisible
+EE		\new Voice = "soprano" \sopranoNotes
+EE		\new Lyrics \lyricsto soprano \sopranoLyrics
+EE		\new Voice = "alto" \altoNotes
+EE		\new Lyrics \lyricsto alto \altoLyrics
+EE              \new Voice = "tenor" \tenorNotes
+EE              \new Lyrics \lyricsto tenor \tenorLyrics
+EE              \new Voice = "bass" \bassNotes
+EE              \new Lyrics \lyricsto bass \bassLyrics
+EE	>>
+EE	\midi{} \layout{} }
