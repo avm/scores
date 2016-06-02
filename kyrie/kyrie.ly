@@ -1,4 +1,4 @@
-\version "2.11.0"
+\version "2.18.0"
 
 #(set-global-staff-size 18)
 \header {
@@ -10,10 +10,9 @@
 line-width = 175
 %print-page-number = false
 #(set-paper-size "a4")
-after-title-space = 3\cm
-between-system-space = 2.5\cm
+obsolete-after-title-space = 3\cm  markup-system-spacing #'basic-distance = #(/ obsolete-after-title-space staff-space)
+obsolete-between-system-space = 2.5\cm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
 bottom-margin = 1.5\cm
-head-separation = 0.5\cm
 }
 
 global = {
@@ -31,7 +30,7 @@ sopranoNotes = \relative g' {
 
  R \breve * 2
  r1 r2 \breathe g  |  bes2.( c4 d2) e  |  f1 d  | R \breve
- r1 r2 \breathe g, |  bes2.( c4 d2) e  |  f( d ees d  |  g,1 ~ a  | bes) a  |
+ r1 r2 \breathe g, |  bes2.( c4 d2) e  |  f( d ees d  |  g,1 a  | bes) a  |
  r2 \breathe g a f |  g( a bes1) |  a2.( bes4 c1) |
  r2 \breathe g a f |  g( a bes1) \fermata | a \breve \break
 
@@ -82,7 +81,7 @@ tenorNotes = \relative g {
 }
 
 
-bassNotes = \relative {
+bassNotes = \relative c' {
  \global
  \clef bass
  R \breve * 3
