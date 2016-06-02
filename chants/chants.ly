@@ -1,5 +1,5 @@
 % Заголовок {{{1
-\version "2.11.0"
+\version "2.18.0"
 
 #(set-global-staff-size 18)
 
@@ -7,12 +7,11 @@
  #(set-paper-size "a4")
  left-margin = 2\cm
  top-margin = 1\cm
- head-separation = 1\cm
  bottom-margin = 2\cm
  line-width = 17\cm
- page-top-space = 0.8\cm
- after-title-space = 2.5\cm
- between-system-space = 2.5\cm
+ obsolete-page-top-space = 0.8\cm  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
+ obsolete-after-title-space = 2.5\cm  markup-system-spacing #'basic-distance = #(/ obsolete-after-title-space staff-space)
+ obsolete-between-system-space = 2.5\cm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
 } % }}}2
 
 \header {
@@ -29,13 +28,13 @@ soprano = \relative c'' \new Voice = "soprano" {
 	\voiceOne
 	\autoBeamOff
 	\key c \minor
-	c8 ^\fthenp d ees4 f8[ ees] |
+	c8 ^\fthenp d ees4 f8([ ees)] |
 	d4 c2 |
 	ees8 f g4 g |
 	f g2 |
 	f8 f g4 f |
 	g8 f ees4 d
-	c8 d ees4 f8[ ees] |
+	c8 d ees4 f8([ ees)] |
 	d4 c2
 }
 
@@ -59,12 +58,12 @@ tenor = \relative c' \new Voice = "tenor" {
 	\key c \minor
 	c8 g  aes4 f |
 	g c2 |
-	c,8 bes ees[ f] g[ aes] |
+	c,8 bes ees([ f)] g([ aes)] |
 	bes4  ees,2 |
 	bes'8 bes ees,4 bes |
 	ees8 bes c4 g' |
 	aes8 g f4 f |
-	g c2 \bar ":|"
+	g c2 \bar ":|."
 }
 
 text = \lyricmode {
@@ -96,13 +95,13 @@ soprano = \relative c'' \new Voice = "soprano" {
 	\voiceOne
 	\autoBeamOff
 	\time 3/2
-	b4 d d d8[ c] b4 g8[ a] |
+	b4 d d d8([ c)] b4 g8([ a)] |
 	b4 e d d2. |
 	\time 4/4
 	b8 d4( e8) d2 |
 	\time 3/2
-	b4 b8[ c16 d] e4 d d( b8[ a]) |
-	b4 b8[ c16 d] e4 d d2 |
+	b4 b8([ c16 d)] e4 d d( b8[ a]) |
+	b4 b8([ c16 d)] e4 d d2 |
 	\time 4/4
 	d d8( c d16[ c b a]) |
 	b1
@@ -113,15 +112,15 @@ alto = \relative c'' \new Voice = "alto" {
 	\voiceTwo
 	\autoBeamOff
 	\time 3/2
-	b4 b b b8[ a] g4 b8[ c] |
-	d4 c d8[ c] b2. |
+	b4 b b b8([ a)] g4 b8([ c)] |
+	d4 c d8([ c)] b2. |
 	\time 4/4
 	g8 b4( c8) b2 |
 	\time 3/2
 	d4 d c b a( b8[ c]) |
 	d4 d c b a2 |
 	\time 4/4
-	b  fis8[ e fis g] |
+	b  fis8([ e fis g)] |
 	g1
 }
 
@@ -129,7 +128,7 @@ tenor = \relative c' \new Voice = "tenor" {
 	\autoBeamOff
 	\clef bass
 	\time 3/2
-	g4 g g g8[ a] e4 e8[ a] |
+	g4 g g g8([ a)] e4 e8([ a)] |
 	g4 c, g' g2. |
 	\time 4/4
 	e8 g4( a8) g2 |
@@ -137,7 +136,7 @@ tenor = \relative c' \new Voice = "tenor" {
 	g4 g c, g' d( e8[ a]) |
 	g4 g c, g' d2 |
 	\time 4/4
-	g,8[ a b c] d2 |
+	g,8([ a b c)] d2 |
 	g,1
 }
 
@@ -145,7 +144,7 @@ tenor = \relative c' \new Voice = "tenor" {
 text = \lyricmode {
 	Но -- вый  год  бе -- жит,
 	во  яс -- лях ле --
-	\once \override LyricText #'self-alignment-X = #LEFT
+	\once \override LyricText.self-alignment-X = #LEFT
 	жит...
 	А кто, кто?
 	От -- ро -- ча  мла -- до
@@ -304,9 +303,7 @@ sily = \lyricmode {
 \score { % {{{2
 	<< \time 3/2
 	\new ChoirStaff <<
-		\new Staff \with { % {{{3
-		  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 4)
-		} <<
+		\new Staff << % {{{3
 			\numericTimeSignature
 			\set Staff.vocalName = \markup \column { "С" "А" }
 			{
@@ -315,32 +312,19 @@ sily = \lyricmode {
 			\new Voice = "sItI" \sItI
 			\new Voice="sily" \sItIsily
 			}
-			\new Lyrics \with {
-				\override VerticalAxisGroup
-				#'minimum-Y-extent = #'(3 . 3)
-			} \lyricsto "soprano" \hvali
-			\new Lyrics \with {
-				\override VerticalAxisGroup
-				#'minimum-Y-extent = #'(-1.2 . 0.8)
-			} \lyricsto "sItI" \vsiangeli
+			\new Lyrics \lyricsto "soprano" \hvali
+			\new Lyrics \lyricsto "sItI" \vsiangeli
 			\new Lyrics \lyricsto "sily" \sily
 		>>
-		\new Staff \with { % {{{3
-		  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 5)
-		} {
+		\new Staff { % {{{3
 			\key bes \major
 			R1. R1 R1. R1
 			\new Voice="sIItII" \sIItII
 			\new Voice \sIItIIsily
 		} % }}}
-		\new Lyrics \with {
-		    \override VerticalAxisGroup
-		    #'minimum-Y-extent = #'(-0.2 . 1)
-		} \lyricsto "sIItII" \vsiangelishort
+		\new Lyrics \lyricsto "sIItII" \vsiangelishort
 		\new Lyrics \lyricsto "sily" \sily
-		\new Staff \with { % {{{3
-		  \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 5)
-		} <<
+		\new Staff << % {{{3
 			\numericTimeSignature
 			{
 			\set Staff.vocalName = \markup \column { "Т" "Б" }
@@ -355,8 +339,8 @@ sily = \lyricmode {
 	>>
 \layout { % {{{3
 	\context {
-	\RemoveEmptyStaffContext
-	\override VerticalAxisGroup #'remove-first = ##t
+	\Staff \RemoveEmptyStaves
+	\override VerticalAxisGroup.remove-first = ##t
 	}
 }
 
