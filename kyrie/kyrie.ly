@@ -24,7 +24,7 @@ global = {
 sopranoNotes = \relative g' {
  \global
  g1 bes | c d( | c2 bes a1) | g4( a bes c d1) |
- r1 f | e2 d2. c4( c4 bes8 a | bes1) a ~ | a r2 
+ r1 f | e2 d2. c4( c4 bes8 a | bes1) a ~ | a r2
  % bar 8
  \breathe d2 ~ | d c bes a ~ | a4( g4 g1 fis2) | g\breve \fermata
  \break
@@ -51,7 +51,7 @@ altoNotes = \relative g' {
  r2 \breathe d2 f2.( g4  |  a2) bes c1  |  g1 \breathe bes |
  g2 bes1( a4 g  |  a2 d,) f2.( g4  |  a2 bes) c1 \breathe |  g1 bes |
  g2 bes1( a4 g  |  f2 g2. a4 bes2 ~ | bes4 a g1 f2  | g4 d g2. f4 f2 ~ |
- f2 e f d) | c1 r2 
+ f2 e f d) | c1 r2
  \breathe g' |  a f g( a | bes2. a8 g f2 a  |  bes a g1) \fermata | fis \breve
 
  R \breve * 3 r2
@@ -69,12 +69,12 @@ tenorNotes = \relative g {
  c1( d  |  g, a)  |  g \breve \fermata |
 
  \breathe d' \breve | d1( c) | ees1. d2  |  d1 r |
- \breathe d  \breve | d1( c) | ees1. d2  |  d1 r2 
- \breathe c  | d bes c( d  |  ees1) d ~ | d r | R \breve r2 
+ \breathe d  \breve | d1( c) | ees1. d2  |  d1 r2
+ \breathe c  | d bes c( d  |  ees1) d ~ | d r | R \breve r2
  \breathe c d bes  | c( d ees1)  |  d \breve ~ d \fermata ~ d
 
  \breathe d \breve f1( g)  |  g( f)  |  g \breve  |  d1 r2
- \breathe c  |  ees ees  d1( | 
+ \breathe c  |  ees ees  d1( |
  g,2 g'2. f4 f e?8 d | e1 d | a) d | R \breve | r1 r2
  \breathe d ~ | d c bes( c ~ | c bes) a1 | g2
  \breathe g'2.( f4 d2) | e2.( f!4 g2 c,) | d1 r | r2
@@ -91,7 +91,7 @@ bassNotes = \relative {
 
  r1 \breathe d  |  f2 g a2.( bes4 | c1) g ~ |  g r  |
  r1 \breathe d  |  f2 g a2.( bes4 | c1) g ~ |  g r  | R \breve * 2 |
- \breathe g1 a2 f |  c'1( a2 bes ~ |  bes a g1)  |  f 
+ \breathe g1 a2 f |  c'1( a2 bes ~ |  bes a g1)  |  f
  \breathe c  |  g' d  |  g2( fis g1) \fermata  |  d \breve
 
  \breathe g1 bes2 bes | a1( g2 c ~ | c4 bes bes a8 g a1) | g \breve |
@@ -115,17 +115,17 @@ sopranoLyrics = \lyricmode {
  \Christe \Christe \Christe \Christe
  \kyrie \kyrie \kyrie e -- lei -- son.
 }
-altoLyrics = \lyricmode { 
+altoLyrics = \lyricmode {
  \Kyrie \kyrie \kyrie
  \Christe \Christe \Christe \Christe
  \kyrie \kyrie \kyrend
 }
-tenorLyrics = \lyricmode { 
+tenorLyrics = \lyricmode {
  \Kyrie \kyrie
  \Christe \Christe \Christe \Christe
  \kyrie \kyrie \kyrie  e -- lei -- son,  \kyrend
 }
-bassLyrics = \lyricmode { 
+bassLyrics = \lyricmode {
  \Kyrie \kyrie
  \Christe \Christe \Christe \Christe
  \kyrie \kyrie \kyrie \kyrie \kyrie \kyrend
