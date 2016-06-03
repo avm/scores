@@ -21,7 +21,7 @@ view: $(PIECE).pdf
 	midicsv $< >$@
 
 track%.wav: $(PIECE).midi.csv
-	grep '^[01$(patsubst track%.wav,%,$@)]' $< | csvmidi | timidity - --preserve-silence -OwM -o $@
+	grep -E '^(0|1|$(patsubst track%.wav,%,$@)),' $< | csvmidi | timidity - --preserve-silence -OwM -o $@
 
 all.wav: track*.wav
 	sox -m $^ $@ vol 0.7
