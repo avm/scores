@@ -207,7 +207,11 @@ PartPFourVoiceOne =  \relative d {
         
         >>
     \layout {}
-    % To create MIDI output, uncomment the following line:
-    %  \midi {}
+    \midi {
+        \context {
+            \Score
+            midiChannelMapping = #'instrument
+        }
+    }
     }
 
