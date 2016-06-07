@@ -35,6 +35,7 @@ PartPOneVoiceOne =  \relative d' {
     cis8  d8  e4 ~ | % 8
     e2 \fermata | % 9
     d8 r8 d8 r8 | \barNumberCheck #10
+    \set melismaBusyProperties = #'()
     b8. ( ->  ais16  b8 ) r16 cis16 ( | % 11
     d8 ) r8 d8 r8 | % 12
     b8. ( ->  ais16  b8 ) r16 cis16 ( | % 13
@@ -95,22 +96,19 @@ PartPOneVoiceOne =  \relative d' {
     d2 \bar "|."
     }
 
-PartPOneVoiceOneLyricsTwo =  \lyricmode { too -- too --  roo pa -- yam \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 }
-PartPOneVoiceOneLyricsOne =  \lyricmode { \skip4 \skip4 \skip4 \skip4 tu
-    ru "tu-" "tu-" ru "tu-" "tu-" tu tu tu tu "dlee-" "dlee-" tu tu
-    "tu-" "tu-" tu "tu-" "tu-" tu tu tu tu "dlee-" "dlee-" tu "hoo-"
-    "hoo-" tu tu tu tu "dlee-" tu "hoo-" "hoo-" "tu-" tu "tu-" tu
+PartPOneVoiceOneLyricsTwo =  \lyricmode { too -- too --  roo pa -- yam
+    too -- roo
+    too -- roo -- roo too -- roo
+    roo
+    too -- roo -- roo too -- roo
+    "too" --  too roo too dlee doo dlee pow
+    too too too too too "dlee-" "dlee-" too too
+    too too too too too too too too too "dlee-" "dlee-" too "hoo-"
+    "hoo-" too too too too "dlee-" too "hoo-" "hoo-" too too too too
     "dlee-" "dlee-" \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 tu \skip4 \skip4 tu \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 "tu-" \skip4 \skip4 woo \skip4 \skip4 \skip4 }
+    \skip4 \skip4 \skip4 too \skip4 \skip4 too \skip4 \skip4 \skip4 \skip4
+    \skip4 \skip4 too \skip4 \skip4 woo
+    }
 PartPTwoVoiceOne =  \relative b {
     \clef "treble_8" \stopStaff \override Staff.StaffSymbol.line-count =
     #5 \startStaff \key d \major \time 2/4 R2 | % 2
@@ -123,6 +121,7 @@ PartPTwoVoiceOne =  \relative b {
     g8 r8 r8 a8 | % 8
     a2 \mf \fermata | % 9
     a8 \mf \pp r8 r4 | \barNumberCheck #10
+    \set melismaBusyProperties = #'()
     b8. ( ->  ais16  b8 ) r16 cis16 ( | % 11
     a8 ) r8 r4 | % 12
     b8. ( ->  ais16  b8 ) r16 cis16 ( | % 13
@@ -188,22 +187,14 @@ PartPTwoVoiceOne =  \relative b {
     }
 
 PartPTwoVoiceOneLyricsTwo =  \lyricmode { too -- too -- roo
-                                          too -- too -- roo "po-" pao
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 }
-PartPTwoVoiceOneLyricsOne =  \lyricmode { \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 tu "tu-" "tu-" \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 tu \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
+                                          too -- too -- roo "po-" pow
+    too too -- roo -- roo too -- roo
+    too -- roo -- roo too -- roo
+    too too too too dlee doo dlee pow  \skip4 \skip4
     \skip4 \skip4 \skip4 \skip4 \skip4 "hoo-" "hoo-" \skip4 \skip4
-    \skip4 \skip4 \skip4 tu tu "tu-" "tu-" "tu-" "tu-" \skip4 \skip4
-    \skip4 \skip4 \skip4 tu tu "tu-" "tu-" "tu-" "tu-" tu tu tu tu
-    "dlee-" tu pao "tu-" "tu-" "tu-" "tu-" tu tu tu tu ru \skip4 \skip4
+    \skip4 \skip4 \skip4 too too too too too too \skip4 \skip4
+    \skip4 \skip4 \skip4 too too too too too too too too too too
+    "dlee-" too pow too too too too too too too too roo \skip4 \skip4
     \skip4 \skip4 \skip4 "doo-" \skip4 wa }
 PartPThreeVoiceOne =  \relative g {
     \clef "bass" \stopStaff \override Staff.StaffSymbol.line-count = #5
@@ -215,6 +206,7 @@ PartPThreeVoiceOne =  \relative g {
     e8 r8 r4 | % 6
     r4 g8. \mp  g16  | % 7
     e8 r8 r8 a8 | % 8
+    \set melismaBusyProperties = #'()
     g2 \fermata | % 9
     fis8 r8 r4 | \barNumberCheck #10
     g8. ( ->  fis16  g8 ) r16 e16 ( | % 11
@@ -287,21 +279,14 @@ PartPThreeVoiceOne =  \relative g {
     }
 
 PartPThreeVoiceOneLyricsTwo =  \lyricmode { "too" -- too -- roo "too" -- too -- roo
-                                            too -- "too" -- ru
-    "po" -- pao \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 }
-PartPThreeVoiceOneLyricsOne =  \lyricmode { \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 tu "tu-" "tu-" "tu-" "tu-" tu tu tu
-    "po-" po pao "tu-" "tu-" "tu-" "tu-" tu tu "tu-" "tu-" "tu-" "tu-"
-    "tu-" "tu-" tu tu tu tu "dlee-" "hoo-" "hoo-" tu tu tu tu tu \skip4
-    \skip4 \skip4 pao \skip4 \skip4 \skip4 \skip4 tu "po-" "po-" pao
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 tu ru \skip4 \skip4
+                                            too -- "too" -- roo
+    "po" -- pow
+    too too -- roo -- roo too -- roo
+    too -- roo -- roo too -- roo too too too
+    "po" po po po po pow too too too too too too too too too too
+    too too too too too too "dlee-" "hoo-" "hoo-" too too too too too \skip4
+    \skip4 \skip4 pow \skip4 \skip4 \skip4 \skip4 too "po-" "po-" pow
+    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 too roo \skip4 \skip4
     \skip4 \skip4 \skip4 \skip4 woo \skip4 \skip4 \skip4 }
 PartPFourVoiceOne =  \relative a, {
     \clef "bass" \stopStaff \override Staff.StaffSymbol.line-count = #5
@@ -316,13 +301,16 @@ PartPFourVoiceOne =  \relative a, {
     a2 \fermata | % 9
     \pageBreak
     d8 r8 r4 | \barNumberCheck #10
+    \set melismaBusyProperties = #'()
     d8. ( ->  fis16  g8 ) r16 e16 ( | % 11
     d8 ) r8 r4 | % 12
     d8. ( ->  fis16  g8 ) r16 e16 ( | % 13
+    \break
     d8 ) r8 r4 | % 14
     r4 r4 | % 15
     d8 r8 r4 | % 16
     r4 r4 | % 17
+    \pageBreak
     d8 r8 r4 | % 18
     d8. ( ->  fis16  g8 ) r16 e16 ( | % 19
     d8 ) r8 r4 | \barNumberCheck #20
@@ -411,28 +399,19 @@ PartPFourVoiceOne =  \relative a, {
     d2 \bar "|."
     }
 
-PartPFourVoiceOneLyricsTwo =  \lyricmode { po -- po -- po -- po -- pao
+PartPFourVoiceOneLyricsTwo =  \lyricmode { po -- po -- po -- po -- pow
                                            po -- po -- "po-" "po-"
-    pao "po" -- po -- po -- po pao "po-" pao \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 }
-PartPFourVoiceOneLyricsOne =  \lyricmode { \skip4 \skip4 \skip4 \skip4
-    \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4 \skip4  \skip4 \skip4
-    \skip4 \skip4 \skip4 tu \skip4 \skip4 \skip4 \skip4 "tu-" "po-"
-    "po-" pao "hoo-" wa pao "hoo-" wa \skip4 \skip4 \skip4 \skip4 \skip4
-    "hoo-" wa pao "hoo-" wa \skip4 \skip4 \skip4 \skip4 \skip4 tu
-    "dlee-" "dlee-" pao \skip4 \skip4 \skip4 \skip4 \skip4 tu \skip4
-    \skip4 \skip4 \skip4 tu ru "doom-" "ba-" "dim-" "ba-" "di-" "doom-"
+    pow "po" -- po -- po -- po pow "po-" pow
+    too too -- roo -- roo too -- roo
+    too -- roo -- roo too -- roo too
+    "po-"
+    "po-" pow "hoo-" wa pow "hoo-" wa \skip4 \skip4 \skip4 \skip4 \skip4
+    "hoo-" wa pow "hoo-" wa \skip4 \skip4 \skip4 \skip4 \skip4 too
+    "dlee-" "dlee-" pow \skip4 \skip4 \skip4 \skip4 \skip4 too \skip4
+    \skip4 \skip4 \skip4 too roo "doom-" "ba-" "dim-" "ba-" "di-" "doom-"
     "ba-" \skip4 "da-" "dee-" dam \skip4 "doom-" ba "doom-" "ba-" "di-"
-    "da-" "doom-" "ba-" "di-" "da-" "di-" "da-" \skip4 \skip4 pao \skip4
-    \skip4 pao \skip4 \skip4 wa }
+    "da-" "doom-" "ba-" "di-" "da-" "di-" "da-" \skip4 \skip4 pow \skip4
+    \skip4 pow \skip4 \skip4 wa }
 
 % The score definition
 \score {
@@ -440,40 +419,36 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { \skip4 \skip4 \skip4 \skip4
         \new Staff <<
             \set Staff.instrumentName = "Choir Tenor"
             \set Staff.shortInstrumentName = "Ten."
-            \context Staff << 
+            \context Staff <<
                 \context Voice = "PartPOneVoiceOne" { \PartPOneVoiceOne }
                 \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsTwo
-               % \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
                 >>
             >>
         \new Staff <<
             \set Staff.instrumentName = "Choir Tenor"
             \set Staff.shortInstrumentName = "Ten."
-            \context Staff << 
+            \context Staff <<
                 \context Voice = "PartPTwoVoiceOne" { \PartPTwoVoiceOne }
                 \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPTwoVoiceOneLyricsTwo
-                %\new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPTwoVoiceOneLyricsOne
                 >>
             >>
         \new Staff <<
             \set Staff.instrumentName = "Choir Bass"
             \set Staff.shortInstrumentName = "Bass"
-            \context Staff << 
+            \context Staff <<
                 \context Voice = "PartPThreeVoiceOne" { \PartPThreeVoiceOne }
                 \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPThreeVoiceOneLyricsTwo
-                %\new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPThreeVoiceOneLyricsOne
                 >>
             >>
         \new Staff <<
             \set Staff.instrumentName = "Choir Bass"
             \set Staff.shortInstrumentName = "Bass"
-            \context Staff << 
+            \context Staff <<
                 \context Voice = "PartPFourVoiceOne" { \PartPFourVoiceOne }
                 \new Lyrics \lyricsto "PartPFourVoiceOne" \PartPFourVoiceOneLyricsTwo
-                %\new Lyrics \lyricsto "PartPFourVoiceOne" \PartPFourVoiceOneLyricsOne
                 >>
             >>
-        
+
         >>
     \layout {}
     % To create MIDI output, uncomment the following line:
