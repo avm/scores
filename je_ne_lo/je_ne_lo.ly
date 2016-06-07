@@ -31,7 +31,7 @@ PartPOneVoiceOne =  \relative d' {
         d2 d8 d8 d8 cis8 | % 5
         d4 e4 f4 e4 | % 6
         d2 d8 d8 d8 cis8 | % 7
-        d2 d4 d4 \break | % 8
+        d2 \bar ".|:" d4 d4 \break | % 8
         d4 f4 e4 d4 | % 9
         cis4 d4 f4. f8 | \barNumberCheck #10
         e4 d4 d4 cis4 | % 11
@@ -52,7 +52,7 @@ PartPOneVoiceOne =  \relative d' {
 PartPOneVoiceOneLyricsOne =  \lyricmode { La la "la," je ne "l'o–," je
     ne "l'o–," je ne "l'o" -- se di -- "re," la la "la," je le vous di
     -- "rai," et la la "la," je le vous di -- "rai." Il est un homme en
-    no vil -- "le," qui de sa femme et ja -- "loux." Il "n'est" pas ja
+    no vil -- "le," qui de sa femme est ja -- "loux." Il "n'est" pas ja
     -- loux sans cau -- "se," mais il est co -- cu du "tout," et la la
     "la," je ne "l'o–," je ne "l'o–," je ne "l'o" -- se di -- "re," la
     la "la," je le vous di -- "rai," et la la "la," je le vous di --
@@ -125,7 +125,7 @@ PartPThreeVoiceOne =  \relative f {
 PartPThreeVoiceOneLyricsOne =  \lyricmode { La la "la," je ne "l'o–," je
     ne "l'o–," je ne "l'o" -- se di -- "re," la la "la," je le vous di
     -- "rai," et la la "la," je le vous di -- "rai." Il est un homme en
-    no vil -- "le," qui de sa femme et ja -- "loux." Il "n'est" pas ja
+    no vil -- "le," qui de sa femme est ja -- "loux." Il "n'est" pas ja
     -- loux sans cau -- "se," mais il -- est co -- cu du "tout." Et la
     la "la," je ne "l'o–," je ne "l'o–," je ne "l'o" -- se di -- "re,"
     la la "la," je le vous di -- "rai," et la la "la," je le vous di --
@@ -171,7 +171,7 @@ PartPFourVoiceOne =  \relative d {
 
 % The score definition
 \score {
-    <<
+    \new ChoirStaff <<
         \new Staff <<
             \set Staff.instrumentName = "Tenor 1"
             \set Staff.shortInstrumentName = "T1"
