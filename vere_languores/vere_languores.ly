@@ -2,6 +2,7 @@
 % automatically converted by musicxml2ly from vere_languores.xml
 
 \header {
+    title = "Vere languores nostros"
     encodingsoftware = "MuseScore 3.0.0"
     composer = "Antonio Lotti (1667–1740)"
     encodingdate = "2016-06-17"
@@ -168,9 +169,11 @@ PartPTwoVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
 \score {
     <<
         \new StaffGroup <<
-            \new PianoStaff <<
-                \set PianoStaff.instrumentName = "Tenor"
-                \set PianoStaff.shortInstrumentName = "T."
+            \new StaffGroup \with {
+                systemStartDelimiter = #'SystemStartSquare
+            } <<
+                \set StaffGroup.instrumentName = "Tenor"
+                \set StaffGroup.shortInstrumentName = "T."
                 \context Staff = "1" << 
                     \context Voice = "PartPOneVoiceOne" { \PartPOneVoiceOne }
                     \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
