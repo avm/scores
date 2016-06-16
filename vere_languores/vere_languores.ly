@@ -190,12 +190,14 @@ PartPTwoVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
                     \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPTwoVoiceOneLyricsOne
                     >>
                 >>
-            
             >>
-        
         >>
     \layout {}
-    % To create MIDI output, uncomment the following line:
-    %  \midi {}
+    \midi {
+        \context {
+            \Score
+            midiChannelMapping = #'instrument
+        }
+    }
     }
 
