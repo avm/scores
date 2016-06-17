@@ -8,7 +8,7 @@
     encodingdate = "2016-06-17"
     }
 
-#(set-global-staff-size 17.2992755906)
+#(set-global-staff-size 17)
 \paper {
     paper-width = 21.0\cm
     paper-height = 29.7\cm
@@ -16,38 +16,42 @@
     bottom-margin = 2.0\cm
     left-margin = 1.0\cm
     right-margin = 1.0\cm
+    system-system-spacing #'basic-distance = #20
+    system-system-spacing #'minimum-distance = #8
+    markup-system-spacing #'basic-distance = #20
+    markup-system-spacing #'minimum-distance = #8
     }
 \layout {
     \context { \Score
         autoBeaming = ##f
         }
     }
-PartPOneVoiceOne =  \relative d' {
+PartPOneVoiceOne = \transpose bes aes { \relative d' {
     \clef "treble_8" \key bes \major \numericTimeSignature\time 4/4 d1 | % 2
     d4 d4 d2 | % 3
     d2 d2 ( ~ | % 4
-    d4 c4 ) d2 ^\fermata | % 5
+    d4 c4 ) d2 | % 5
     d1 | % 6
     d2. f4 \break | % 7
     g4 f4 g4. ( f8 | % 8
     es2 ) d4 f4 ~ | % 9
     f4 f4 f4 f4 | \barNumberCheck #10
-    f4 ( e4 ) f4 c4 | % 11
-    d2 c4 c4 | % 12
+    f4 ( e4 ) f4 c4 ^\markup { \bold "Solo" } | % 11
+    d2 c4 c4^\markup { \bold "Tutti" } | % 12
     c4 c4 f2 \break | % 13
-    e4 e2 e4 | % 14
-    f2 c4 f4 | % 15
+    e4 e2^\markup { \bold "Solo" } e4 | % 14
+    f2 c4 f4^\markup { \bold "Tutti" } | % 15
     f4 f4 f2 | % 16
     f4 d2 es4 | % 17
     c4 ( d4 c2 ) | % 18
-    d4 f2 es4 | % 19
+    d4 f2^\markup { \bold "Solo" } es4 | % 19
     d2. d4 \break | \barNumberCheck #20
     es2 es4 es4 | % 21
     es2. es4 | % 22
     d2 d2 | % 23
-    d2 d4 d4 | % 24
+    d2^\markup { \bold "Tutti" } d4 d4 | % 24
     es2 es2 | % 25
-    c2 c4 c4 \pageBreak | % 26
+    c2 c4 c4 \break | % 26
     d2 d2 | % 27
     d2. d4 | % 28
     c2 ( d4 ) es4 | % 29
@@ -60,21 +64,23 @@ PartPOneVoiceOne =  \relative d' {
     es1 | % 36
     d1 ^\fermata \bar "|."
     }
+}
 
 PartPOneVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
-    "nos-" "tros," ve -- re lan -- guo -- res "nos-" tros "i-" "pse," i
-    -- pse "tu-" "lit," lan -- guo -- "res," lan -- guo -- res nos --
-    tros i -- pse tu -- "lit," lan -- guo -- res nos -- tros i -- pse tu
-    -- "lit," et do -- lo -- res nos -- "tros," do -- lo -- res nos --
-    tros i -- pse por -- ta -- "vit," i -- pse por -- ta -- "vit," et do
-    -- "lo-" res "nos-" tros i -- pse por -- "ta-" "vit," i -- pse por
-    -- ta -- "vit." }
-PartPOneVoiceFive =  \relative bes {
+"nos" -- "tros," ve -- re lan -- guo -- res "nos" -- tros "i" -- "pse,"
+\skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4
+\skip4  \skip4 \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4
+\skip4  \skip4  \skip4  \skip4  \skip4 \skip4  \skip4  \skip4  \skip4  \skip4
+\skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4 \skip4  \skip4  \skip4
+\skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4
+\skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4
+i -- pse por -- ta -- "vit." }
+PartPOneVoiceFive = \transpose bes aes { \relative bes {
     \clef "treble_8" \key bes \major \numericTimeSignature\time 4/4 bes1
     | % 2
     a2. a4 | % 3
     bes4 a4 bes4. ( a8 | % 4
-    g2 ) fis2 ^\fermata | % 5
+    g2 ) fis2 | % 5
     f1 | % 6
     f4 f4 bes2 \break | % 7
     bes2 bes2 ( ~ | % 8
@@ -95,7 +101,7 @@ PartPOneVoiceFive =  \relative bes {
     c4 ( b8 [ a8 ) ] b2 | % 23
     b2 b4 b4 | % 24
     c2 c2 | % 25
-    a2 a4 a4 \pageBreak | % 26
+    a2 a4 a4 \break | % 26
     bes2 bes2 | % 27
     f2. bes4 | % 28
     a2 ( bes4 ) c4 | % 29
@@ -104,24 +110,25 @@ PartPOneVoiceFive =  \relative bes {
     fis2 a4 a4 \break | % 32
     bes2 ( c2 | % 33
     a4 bes4 a2 ) | % 34
-    bes4 ^\markup{ \bold\italic {rall.} } g4 g4 g4 | % 35
+    bes4 g4 g4 g4 | % 35
     g2 ( c2 ~ | % 36
-    c4 b8 [ a8 ) ] b2 ^\fermata \bar "|."
+    c4 b8 [ a8 ) ] b2 _\fermata \bar "|."
     }
+}
 
 PartPOneVoiceFiveLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
-    "nos-" "tros," ve -- re lan -- guo -- res "nos-" tros "i-" "pse," i
+    "nos" -- "tros," ve -- re lan -- guo -- res "nos" -- tros "i" -- "pse," i
     -- pse tu -- "lit," lan -- guo -- "res," lan -- guo -- res "nos-"
     tros i -- pse tu -- "lit," lan -- guo -- res nos -- tros i -- pse
-    "tu-" "lit," et do -- lo -- res nos -- "tros," do -- lo -- res
-    "nos-" tros i -- pse por -- ta -- "vit," i -- pse por -- ta --
-    "vit," et do -- "lo-" res "nos-" tros i -- pse por -- "ta-" "vit," i
-    -- pse por -- "ta-" "vit." }
-PartPTwoVoiceOne =  \relative g {
+    "tu" -- "lit," et do -- lo -- res nos -- "tros," do -- lo -- res
+    "nos" -- tros i -- pse por -- ta -- "vit," i -- pse por -- ta --
+    "vit," et do -- "lo" -- res "nos" -- tros i -- pse por -- "ta" -- "vit," i
+    -- pse por -- "ta" -- "vit." }
+PartPTwoVoiceOne = \transpose bes aes { \relative g {
     \clef "bass" \key bes \major \numericTimeSignature\time 4/4 g1 | % 2
-    d2. d4 | % 3
+    fis2. d4 | % 3
     g4 fis4 g4. ( f8 | % 4
-    es2 ) d2 ^\fermata | % 5
+    es2 ) d2 | % 5
     bes1 | % 6
     bes2. d4 \break | % 7
     es4 d4 es4. ( d8 | % 8
@@ -142,7 +149,7 @@ PartPTwoVoiceOne =  \relative g {
     g2 g2 | % 23
     g2 g4 g4 | % 24
     c2 c,2 | % 25
-    f2 f4 f4 \pageBreak | % 26
+    f2 f4 f4 \break | % 26
     bes2 bes,2 | % 27
     bes2. bes4 | % 28
     f'2. fis4 | % 29
@@ -155,33 +162,28 @@ PartPTwoVoiceOne =  \relative g {
     c1 | % 36
     g1 ^\fermata \bar "|."
     }
+}
 
 PartPTwoVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
-    "nos-" "tros," ve -- re lan -- guo -- res "nos-" tros i -- "pse," i
+    "nos" -- "tros," ve -- re lan -- guo -- res "nos" -- tros i -- "pse," i
     -- pse tu -- "lit," lan -- guo -- "res," lan -- guo -- res nos --
     tros i -- pse tu -- "lit," lan -- guo -- res nos -- tros i -- pse tu
     -- "lit," do -- lo -- res nos -- "tros," do -- lo -- res nos -- tros
     i -- pse por -- ta -- "vit," i -- pse por -- ta -- "vit," et do --
-    lo -- res "nos-" tros i -- pse por -- "ta-" "vit," i -- pse por --
+    lo -- res "nos" -- tros i -- pse por -- "ta" -- "vit," i -- pse por --
     ta -- "vit." }
 
 % The score definition
 \score {
-    <<
         \new StaffGroup <<
-            \new StaffGroup \with {
-                systemStartDelimiter = #'SystemStartSquare
-            } <<
-                \set StaffGroup.instrumentName = "Tenor"
-                \set StaffGroup.shortInstrumentName = "T."
-                \context Staff = "1" << 
-                    \context Voice = "PartPOneVoiceOne" { \PartPOneVoiceOne }
-                    \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
-                    >> \context Staff = "2" <<
-                    \context Voice = "PartPOneVoiceFive" { \PartPOneVoiceFive }
-                    \new Lyrics \lyricsto "PartPOneVoiceFive" \PartPOneVoiceFiveLyricsOne
-                    >>
-                >>
+            \new Staff = "tenorStaff" <<
+                \set Staff.instrumentName = "Tenor"
+                \set Staff.shortInstrumentName = "T."
+                \context Voice = "PartPOneVoiceOne" { \voiceOne \PartPOneVoiceOne }
+                \context Voice = "PartPOneVoiceFive" { \voiceTwo \PartPOneVoiceFive }
+            >>
+            \new Lyrics \with { alignAboveContext = "tenorStaff" } \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
+            \new Lyrics \lyricsto "PartPOneVoiceFive" \PartPOneVoiceFiveLyricsOne
             \new Staff <<
                 \set Staff.instrumentName = "Bass"
                 \set Staff.shortInstrumentName = "B."
@@ -191,7 +193,6 @@ PartPTwoVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
                     >>
                 >>
             >>
-        >>
     \layout {}
     \midi {
         \context {
