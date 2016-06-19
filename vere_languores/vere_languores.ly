@@ -27,14 +27,15 @@
         }
     }
 PartPOneVoiceOne = \transpose bes aes { \relative d' {
-    \clef "treble_8" \key bes \major \numericTimeSignature\time 4/4 d1 | % 2
+  \dynamicUp
+    \clef "treble_8" \key bes \major \numericTimeSignature\time 4/4 d1\pp | % 2
     d4 d4 d2 | % 3
     d2 d2 ( ~ | % 4
-    d4 c4 ) d2 | % 5
-    d1 | % 6
+    d4 c4\> ) d2 \! | % 5
+    \breathe d1 | % 6
     d2. f4 \break | % 7
     g4 f4 g4. ( f8 | % 8
-    es2 ) d4 f4 ~ | % 9
+    es2 ) d4 \breathe f4 ~ | % 9
     f4 f4 f4 f4 | \barNumberCheck #10
     f4 ( e4 ) f4 c4 ^\markup { \bold "Solo" } | % 11
     d2 c4 c4^\markup { \bold "Tutti" } | % 12
@@ -44,23 +45,23 @@ PartPOneVoiceOne = \transpose bes aes { \relative d' {
     f4 f4 f2 | % 16
     f4 d2 es4 | % 17
     c4 ( d4 c2 ) | % 18
-    d4 f2^\markup { \bold "Solo" } es4 | % 19
+    d4 f2^\markup { \center-align \bold "Solo " \dynamic "p" } es4 | % 19
     d2. d4 \break | \barNumberCheck #20
     es2 es4 es4 | % 21
     es2. es4 | % 22
     d2 d2 | % 23
-    d2^\markup { \bold "Tutti" } d4 d4 | % 24
+    d2 ^\markup { \right-align \bold "Tutti " \dynamic "f" } d4 d4 | % 24
     es2 es2 | % 25
     c2 c4 c4 \break | % 26
     d2 d2 | % 27
-    d2. d4 | % 28
+    d2.\p d4 | % 28
     c2 ( d4 ) es4 | % 29
     es4 ( d8 [ c8 ] d2 ~ | \barNumberCheck #30
     d4 c4 ) d2 | % 31
     d2 d4 d4 \break | % 32
     d2 ( es2 | % 33
     d1 ) | % 34
-    d4 ^\markup{ \bold\italic {rall.} } es4 es4 d4 | % 35
+    d4  es4-- es4-- d4-- | % 35
     es1 | % 36
     d1 ^\fermata \bar "|."
     }
@@ -76,10 +77,11 @@ PartPOneVoiceOneLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
 \skip4  \skip4  \skip4  \skip4  \skip4  \skip4  \skip4
 i -- pse por -- ta -- "vit." }
 PartPOneVoiceFive = \transpose bes aes { \relative bes {
+  \dynamicUp
     \clef "treble_8" \key bes \major \numericTimeSignature\time 4/4 bes1
     | % 2
-    a2. a4 | % 3
-    bes4 a4 bes4. ( a8 | % 4
+    a2. a4 \< | % 3
+    bes4 a4 \! bes4. ( a8 | % 4
     g2 ) fis2 | % 5
     f1 | % 6
     f4 f4 bes2 \break | % 7
@@ -88,7 +90,7 @@ PartPOneVoiceFive = \transpose bes aes { \relative bes {
     d4 c4 d4 c4 | \barNumberCheck #10
     bes2 a4 a4 | % 11
     bes2 a4 a4 | % 12
-    g4 a4 a4 ( b4 ) \break | % 13
+    g4 a4 a2 \break | % 13
     c4 g2 g4 | % 14
     a2 a4 c4 | % 15
     d4 c4 d2 | % 16
@@ -110,7 +112,7 @@ PartPOneVoiceFive = \transpose bes aes { \relative bes {
     fis2 a4 a4 \break | % 32
     bes2 ( c2 | % 33
     a4 bes4 a2 ) | % 34
-    bes4 g4 g4 g4 | % 35
+    bes4 g4-- g4-- g4-- | % 35
     g2 ( c2 ~ | % 36
     c4 b8 [ a8 ) ] b2 _\fermata \bar "|."
     }
@@ -125,6 +127,7 @@ PartPOneVoiceFiveLyricsOne =  \lyricmode { Ve -- re lan -- guo -- res
     "vit," et do -- "lo" -- res "nos" -- tros i -- pse por -- "ta" -- "vit," i
     -- pse por -- "ta" -- "vit." }
 PartPTwoVoiceOne = \transpose bes aes { \relative g {
+  \dynamicUp
     \clef "bass" \key bes \major \numericTimeSignature\time 4/4 g1 | % 2
     fis2. d4 | % 3
     g4 fis4 g4. ( f8 | % 4
@@ -132,7 +135,7 @@ PartPTwoVoiceOne = \transpose bes aes { \relative g {
     bes1 | % 6
     bes2. d4 \break | % 7
     es4 d4 es4. ( d8 | % 8
-    c2 ) bes4 bes'4 ~ | % 9
+    c2\>  ) bes4 \! bes'4 ~ | % 9
     bes4 a4 bes4 a4 | \barNumberCheck #10
     g2 f4 f4 | % 11
     e2 f4 f4 | % 12
@@ -158,7 +161,7 @@ PartPTwoVoiceOne = \transpose bes aes { \relative g {
     d2 fis4 d4 \break | % 32
     g8 ( [ f8 es8 d8 ] c8 [ d8 es8 c8 ] | % 33
     d4 g2 fis4 ) | % 34
-    g4 ^\markup{ \bold\italic {rall.} } c,4 c4 b4 | % 35
+    g4 c,4-- c4-- b4-- | % 35
     c1 | % 36
     g1 ^\fermata \bar "|."
     }
