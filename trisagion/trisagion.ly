@@ -55,7 +55,7 @@ PartPOneVoiceTwo =  \relative f' {
     ~ bes8 [ a8 g8 bes8 ) ] | % 2
     a4 ( g4 f8 [ a8 g8 f8 ) ] | % 3
     g8 ( f4 e8 ) d2 | % 4
-    f4 ( bes4 ~ bes8 [ a8 g8 g8 ) ] \break | % 5
+    f4 ( bes4 ~ bes8 [ a8 g8 bes8 ) ] \break | % 5
     a4 ( g4 f8 [ a8 g8 f8 ) ] | % 6
     g8 ( f4 e8 ) d2 | % 7
     f4 ( bes4 ~ bes8 [ a8 g8 bes8 ) ] | % 8

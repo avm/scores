@@ -559,8 +559,8 @@ A</longName>
           <Slur type="stop" id="10"/>
           <Note>
             <track>1</track>
-            <pitch>67</pitch>
-            <tpc>15</tpc>
+            <pitch>70</pitch>
+            <tpc>12</tpc>
             </Note>
           </Chord>
         </Measure>
