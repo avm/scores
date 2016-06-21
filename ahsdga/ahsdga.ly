@@ -29,13 +29,13 @@ tenorINotes = \relative g {
     \cadenzaOn
 % ахсдга т1
  \voiceOne
- c8 d e2 e8 f e2 \bar "|"  f8 f f e f g f e \bar "|" \break
+ c8 d e2 e8 f e2 \bar "|"  f8 f f e f g f e \bar "" \break
  e f e d2 \bar "|" c8 c c c c( b) c d e4.( d8) \bar "|" \break
- c c c4.( b8) c d c2 b4 a1 \bar "|"
+ c c c4.( b8) c d c2 b4 a1 \bar "|."
  \cadenzaOff
  \omit Score.TimeSignature
  \time 5/4 e'4. f8 e( d) c2 \bar "|"
- e4 e e e2 \bar "|"  e4. f8 e( d) c2 \bar "|"  e4 e e e2 \bar "|" \break
+ e4 e e e2 \bar "||"  e4. f8 e( d) c2 \bar "|"  e4 e e e2 \bar "||" \break
  e4. e8 e( f) g2 \bar "|"
  \omit Score.TimeSignature
  \time 7/4
@@ -112,6 +112,7 @@ geoLyrics = \lyricmode {
         \context {
             \Score
             \omit BarNumber
+            \omit TimeSignature
         }
     } \midi {}
 }
