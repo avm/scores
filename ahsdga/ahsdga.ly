@@ -1,6 +1,6 @@
 % headers {{{1
 \version "2.18.2"
-#(set-global-staff-size 18)
+#(set-global-staff-size 20)
 \header {
 	title = "Тропарь Пасхи"
 	subtitle = "грузинский"
@@ -13,7 +13,7 @@
 	left-margin = 2\cm
 	bottom-margin = 1.5\cm
 	markup-system-spacing.minimum-distance = #18
-	system-system-spacing.minimum-distance = #16
+	system-system-spacing.minimum-distance = #15
 }
 
 % notes {{{1
@@ -102,7 +102,7 @@ geoLyrics = \lyricmode {
     სი -- კვდი -- ლი -- თა სი -- კვდი -- ლი -- სა
     და -- მთრგუნ -- ვე -- ლი
     და  სა -- ფლა -- ვე -- ბის  ში -- ნა -- თა
-    ცხო -- ვრე -- ბის  მი -- მნი --ჭე -- ბე -- ლი.
+    ცხო -- ვრე -- ბის  მი -- მნი -- ჭე -- ბე -- ლი.
     ქრი -- სტე აღ -- სდგა!
     ჭე -- შმა -- რი -- ტად!
     ქრი -- სტე აღ -- სდგა!
