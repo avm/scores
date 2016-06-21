@@ -12,7 +12,7 @@
 	page-top-space = 2\cm
 	left-margin = 2\cm
 	bottom-margin = 1.5\cm
-	markup-system-spacing.minimum-distance = #16
+	markup-system-spacing.minimum-distance = #18
 	system-system-spacing.minimum-distance = #16
 }
 
@@ -83,6 +83,20 @@ commonLyrics = \lyricmode {
   Che -- shma -- ri -- tad!
 }
 
+geoLyrics = \lyricmode {
+    ქრი -- სტე აღ -- სდგა მკვდრე -- თით
+    სი -- კვდი -- ლი -- თა სი -- კვდი -- ლი -- სა
+    და -- მთრგუნ -- ვე -- ლი
+    და  სა -- ფლა -- ვე -- ბის  ში -- ნა -- თა
+    ცხო -- ვრე -- ბის  მი -- მნი --ჭე -- ბე -- ლი.
+    ქრი -- სტე აღ -- სდგა!
+    ჭე -- შმა -- რი -- ტად!
+    ქრი -- სტე აღ -- სდგა!
+    ჭე -- შმა -- რი -- ტად!
+    ქრი -- სტე აღ -- სდგა!
+    ჭე -- შმა -- რი -- ტად!
+}
+
 % score {{{1
 \score {
 	\new ChoirStaff <<
@@ -91,6 +105,7 @@ commonLyrics = \lyricmode {
             \new Voice = "tenorII" \tenorIINotes
         >>
         \new Lyrics \lyricsto "tenorI" \commonLyrics
+        \new Lyrics \lyricsto "tenorI" \geoLyrics
 		\new Voice = "bass" \bassNotes
 	>>
 	\layout {
