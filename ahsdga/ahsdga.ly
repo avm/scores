@@ -83,6 +83,20 @@ commonLyrics = \lyricmode {
   Che -- shma -- ri -- tad!
 }
 
+russianLyrics = \lyricmode {
+  Қри -- сте   ах  -- сдга   мквдре -- тит,
+  си -- квди -- ли -- та   си -- квди -- ли -- сa
+  да -- мтргун   ве -- ли,
+  да   са -- пла -- ве -- бис   ши -- на -- та
+  цхо -- вре -- бис   ми -- мни -- че -- бе -- ли.
+  Қри -- сте   ах -- сдга!
+  Че -- шма -- ри -- тад!
+  Қри -- сте   ах -- сдга!
+  Че -- шма -- ри -- тад!
+  Қри -- сте   ах -- сдга!
+  Че -- шма -- ри -- тад!
+}
+
 geoLyrics = \lyricmode {
     ქრი -- სტე აღ -- სდგა მკვდრე -- თით
     სი -- კვდი -- ლი -- თა სი -- კვდი -- ლი -- სა
@@ -104,7 +118,7 @@ geoLyrics = \lyricmode {
             \new Voice = "tenorI" \tenorINotes
             \new Voice = "tenorII" \tenorIINotes
         >>
-        \new Lyrics \lyricsto "tenorI" \commonLyrics
+        \new Lyrics \lyricsto "tenorI" \russianLyrics
         \new Lyrics \lyricsto "tenorI" \geoLyrics
 		\new Voice = "bass" \bassNotes
 	>>
