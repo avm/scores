@@ -9,12 +9,12 @@
     subtitle = "грузинский распев"
     }
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 19.5)
 \paper {
     paper-width = 21.01\cm
     paper-height = 29.69\cm
     top-margin = 1.0\cm
-    bottom-margin = 2.0\cm
+    bottom-margin = 1.0\cm
     left-margin = 1.0\cm
     right-margin = 1.0\cm
     system-system-spacing #'basic-distance = #20
@@ -48,6 +48,7 @@ PartPOneVoiceOne =  \relative d'' {
 PartPOneVoiceOneLyricsOne =  \lyricmode { "Свя" -- "тый" "Бо" -- "же,"
     "Свя" -- "тый" "креп" -- "кий," "Свя" -- "тый" "без" -- "смерт" --
     "ный," "по" -- "ми" -- "луй" "нас."
+    \override Score.LyricText #'font-size = #0.1
     "Сла" -- "ва Отцу и Сыну и Святому Духу, и ныне и присно и во" ве -- ки "ве" -- "ков."
     "А" -- "минь." }
 PartPOneVoiceTwo =  \relative f' {
