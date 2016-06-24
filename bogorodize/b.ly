@@ -4,7 +4,7 @@
 
 \paper {
  #(set-paper-size "a4")
- left-margin = 1\cm
+ left-margin = 2\cm
  right-margin = 1\cm
  ragged-last-bottom = ##t
  ragged-last = ##f

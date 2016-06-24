@@ -13,12 +13,13 @@
 
 #(set-global-staff-size 18.0675)
 \paper {
+    #(set-paper-size "a4")
     paper-width = 21.0\cm
     paper-height = 29.7\cm
     top-margin = 1.72\cm
     bottom-margin = 1.72\cm
-    left-margin = 1.72\cm
-    right-margin = 1.72\cm
+    left-margin = 2\cm
+    right-margin = 1\cm
     }
 \layout {
     \context { \Score

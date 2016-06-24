@@ -13,8 +13,7 @@
     #(set-paper-size "a4")
     top-margin = 1.0\cm
     bottom-margin = 1.0\cm
-    left-margin = 1.0\cm
-    right-margin = 1.0\cm
+    left-margin = 2.0\cm
     system-system-spacing #'basic-distance = #16
     system-system-spacing #'minimum-distance = #8
     markup-system-spacing #'basic-distance = #20
