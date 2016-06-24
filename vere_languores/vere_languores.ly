@@ -10,10 +10,9 @@
 
 #(set-global-staff-size 17)
 \paper {
-    paper-width = 21.0\cm
-    paper-height = 29.7\cm
+    #(set-paper-size "a4")
     top-margin = 1.0\cm
-    bottom-margin = 2.0\cm
+    bottom-margin = 1.0\cm
     left-margin = 1.0\cm
     right-margin = 1.0\cm
     system-system-spacing #'basic-distance = #16
