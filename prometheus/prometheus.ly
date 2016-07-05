@@ -6,6 +6,7 @@
 otherdynamics = #(make-dynamic-script "other-dynamics")
 
 \header {
+    worknumber = "27"
     encodingdate = "2016-07-05"
     title = "Прометей"
     encodingsoftware = "MuseScore 3.0.0"
@@ -14,12 +15,11 @@ otherdynamics = #(make-dynamic-script "other-dynamics")
     poet = "Слова Я. Полонского"
     }
 
-#(set-global-staff-size 20.0750126457)
+#(set-global-staff-size 15)
 \paper {
-    paper-width = 21.01\cm
-    paper-height = 29.69\cm
+    #(set-paper-size "a4")
     top-margin = 1.0\cm
-    bottom-margin = 2.0\cm
+    bottom-margin = 1.0\cm
     left-margin = 1.0\cm
     right-margin = 1.0\cm
     }
@@ -30,6 +30,7 @@ otherdynamics = #(make-dynamic-script "other-dynamics")
         }
     }
 PartPOneVoiceOne =  \relative bes' {
+    \dynamicUp
     \clef "treble" \key bes \major \time 2/2 | % 1
     \tempo "Moderato" 2=88 r2. bes4 \p | % 2
     bes2 bes4 ( -. bes4 ) -. | % 3
@@ -331,6 +332,7 @@ PartPOneVoiceOneLyricsOne =  \lyricmode { "Я" "шёл" "под" "ла " __ "м�
     " __ "лез " __ "ных" "ког " __ "тей" "и" "це " __ "пей," "же " __
     "лез " __ "ных" "ког " __ "тей" "и" "це " __ "пей." }
 PartPTwoVoiceOne =  \relative bes' {
+    \dynamicUp
     \clef "treble" \key bes \major \time 2/2 r2. bes4 \p | % 2
     bes2 bes4 ( -. bes4 ) -. | % 3
     bes2 bes2 ~ | % 4
@@ -591,6 +593,7 @@ PartPTwoVoiceOneLyricsOne =  \lyricmode { "Я" "шёл" "под" "ла " __ "м�
     "ных" "ког " __ "тей" "и" "це " __ "пей," "же " __ "лез " __ "ных"
     "ког " __ "тей" "и" "це " __ "пей." }
 PartPThreeVoiceOne =  \relative d' {
+    \dynamicUp
     \clef "treble_8" \key bes \major \time 2/2 r2. d4 \p | % 2
     d2 d4 ( -. d4 ) -. | % 3
     es2 es2 ~ | % 4
@@ -855,6 +858,7 @@ PartPThreeVoiceOneLyricsOne =  \lyricmode { "Я" "шёл" "под" "ла " __
     "пей," "же " __ "лез " __ "ных" "ког " __ "тей" "и" "це " __ "пей."
     }
 PartPFourVoiceOne =  \relative f {
+    \dynamicUp
     \clef "treble_8" \key bes \major \time 2/2 r2. f4 \p | % 2
     f2 f4 ( -. f4 ) -. | % 3
     ges2 ges2 ~ | % 4
@@ -1115,6 +1119,7 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { "Я" "шёл" "под" "ла " __
     __ "пей," "же " __ "лез " __ "ных" "ког " __ "тей" "и" "це " __
     "пей." }
 PartPFiveVoiceOne =  \relative bes, {
+    \dynamicUp
     \clef "bass" \key bes \major \time 2/2 r2. bes4 \p | % 2
     bes2 bes4 ( -. bes4 ) -. | % 3
     bes2 bes2 ~ | % 4
