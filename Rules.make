@@ -18,10 +18,13 @@ view: $(PIECE).pdf
 	mv $(patsubst %.nosource,%,$@) $@
 
 %.midi.csv: %.midi
-	midicsv $< >$@
+	midicsv $< | sed '/Program_c/s/52/16/' >$@
 
-track%.wav: $(PIECE).midi.csv
-	grep -E '^(0|1|$(patsubst track%.wav,%,$@)),' $< | csvmidi | timidity - --preserve-silence -OwM -o $@
+track%.midi.csv: $(PIECE).midi.csv
+	grep -E '^(0,|.*(Tempo|Time_signature|Start_track|End_track)|$(patsubst track%.midi.csv,%,$@),)' $< >$@
+
+%.wav: %.midi.csv
+	csvmidi $< | timidity - --preserve-silence -OwM -o $@
 
 all.wav: track*.wav
 	sox -m $^ $@ vol 0.7
