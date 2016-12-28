@@ -15,10 +15,12 @@
     paper-height = 29.69\cm
     top-margin = 1.0\cm
     bottom-margin = 2.0\cm
-    left-margin = 1.0\cm
+    left-margin = 2.0\cm
     right-margin = 1.0\cm
     system-system-spacing.minimum-distance = #12
     system-system-spacing.basic-distance = #16
+    markup-system-spacing.minimum-distance = #12
+    markup-system-spacing.basic-distance = #16
     }
 \layout {
     \context { \Score
@@ -67,8 +69,8 @@ PartPTwoVoiceOne =  \relative g {
     \tempo "Palēnām. Довольно медленно" 4 = 66
     \clef "treble_8" \key bes \major \time 4/4 g4 bes4 a4. a8 | % 2
     g4 g4 es4 d4 | % 3
-    es4 g8 [( es'8 )] es4 bes8 [( bes8 )] | % 4
-    bes4 bes4 bes4 bes8 [( bes8 )] \break | % 5
+    es4 g8 [( es'8 )] es4( bes8) bes8  | % 4
+    bes4 bes4 bes4( bes8) bes8 \break | % 5
     bes4 bes4 a4. a8 | % 6
     g4 g4 es4 d4 | % 7
     g4 bes4 bes4( a8) a8 | % 8
@@ -107,10 +109,6 @@ PartPFourVoiceOne =  \relative g {
             \context Staff << 
                 \context Voice = "PartPOneVoiceOne" { \PartPOneVoiceOne }
                 \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsTwo
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsThree
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsFour
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsFive
                 >>
             >>
         \new Staff <<
@@ -126,10 +124,6 @@ PartPFourVoiceOne =  \relative g {
             \context Staff << 
                 \context Voice = "PartPThreeVoiceOne" { \PartPThreeVoiceOne }
                 \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsOne
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsTwo
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsThree
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsFour
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsFive
                 >>
             >>
         \new Staff <<
@@ -145,4 +139,43 @@ PartPFourVoiceOne =  \relative g {
     % To create MIDI output, uncomment the following line:
     %  \midi {}
     }
+\markup {
+    \fontsize #1.5
+    \fill-line { \hspace #0.1
+	\column {
+        \line { \bold "2."
+            \hspace #2.0
+            \column {
+                "Nu, dieviņi, tava vaļa, nu tavāi rociņāi,"
+                "Nu, dieviņi, tava vaļa, nu tavāi rociņā."
+            }
+        }
+        \hspace #1.0
+        \line { \bold "3."
+            \hspace #2.0
+            \column {
+                "Nu tavāi rociņāi manis labis kumeliņis."
+                "Nu tavāi rociņāi manis labis kumeliņs."
+            }
+        }
+        \hspace #1.0
+        \line { \bold "4."
+            \hspace #2.0
+            \column {
+                "Migla, migla, liela rasa, man pazuda kumeliņis."
+                "Migla, migla, liela rasa, man pazuda kumeliņs."
+            }
+        }
+        \hspace #1.0
+        \line { \bold "5."
+            \hspace #2.0
+            \column {
+                "Nokrīt migla, nokrīt rasa, es dabūju kumeliņu,"
+                "Nokrīt migla, nokrīt rasa, es dabūju kumeliņ."
+            }
+        }
+    }
+    \hspace #0.1
+  }
+}
 
