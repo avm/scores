@@ -1,7 +1,7 @@
 all: $(PIECE).pdf
 
 view: $(PIECE).pdf
-	evince $<
+	open $<
 
 %.ly: %.satb
 	python ../satby.py <$< | cat -s >$@
