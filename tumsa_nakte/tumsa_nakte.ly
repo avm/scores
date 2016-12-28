@@ -17,6 +17,8 @@
     bottom-margin = 2.0\cm
     left-margin = 1.0\cm
     right-margin = 1.0\cm
+    system-system-spacing.minimum-distance = #1
+    system-system-spacing.basic-distance = #2
     }
 \layout {
     \context { \Score
@@ -43,25 +45,26 @@ PartPOneVoiceOneLyricsOne =  \lyricmode {
 PartPOneVoiceOneLyricsTwo =  \lyricmode {
     \set stanza = #"2. "
     "Nu," die -- vi -- "ņi," ta
-    -- va va -- "ļa," nu ta -- "vā" -- i ro -- ci "ņā" -- "i," "Nu," die
+    -- va va -- "ļa," nu ta -- "vā" -- i ro -- ci -- "ņā" -- "i," "Nu," die
     -- vi -- "ņi," ta -- va va -- "ļa," nu ta -- "vā" -- i ro -- ci --
     "ņā." }
 PartPOneVoiceOneLyricsFour =  \lyricmode {  \set stanza = #"4. "
-    "Mig" "la," mig -- "la,"
+    "Mig" -- "la," mig -- "la,"
     lie -- la ra -- "sa," man pa -- zu -- da  ku -- me -- li --
     ņis.  Mig -- "la," mig -- "la," lie -- la ra -- "sa," man pa -- zu
     -- da ku -- me -- "liņs." }
 PartPOneVoiceOneLyricsFive =  \lyricmode {  \set stanza = #"5. "
-    "Nok" "rīt" mig -- "la,"
+    "Nok" -- "rīt" mig -- "la,"
     nok -- "rīt" ra -- "sa," es da -- "bū" -- ju ku -- me -- li
-    "ņu," Nok -- "rīt" mig -- "la," nok -- rit ra -- "sa," es da -- "bū"
+    -- "ņu," Nok -- "rīt" mig -- "la," nok -- rit ra -- "sa," es da -- "bū"
     -- ju ku -- me "liņ." }
 PartPOneVoiceOneLyricsThree =  \lyricmode {  \set stanza = #"3. "
     " Nu" ta -- "vā" -- i ro --
     ci -- "ņā" -- i ma -- nis la -- bis ku -- me -- li -- ņis. Nu
     ta -- "vā" -- i ro -- ci -- "ņā" -- i ma -- nis la -- bis ku -- me
-    "liņš." }
+    -- "liņs." }
 PartPTwoVoiceOne =  \relative g {
+    \tempo "Palēnām. Довольно медленно" 4 = 66
     \clef "treble_8" \key bes \major \time 4/4 g4 bes4 a4. a8 | % 2
     g4 g4 es4 d4 | % 3
     es4 g8 [ es'8 ] es4 bes8 [ bes8 ] | % 4
@@ -103,11 +106,6 @@ PartPFourVoiceOne =  \relative g {
             \set Staff.shortInstrumentName = "Т."
             \context Staff << 
                 \context Voice = "PartPOneVoiceOne" { \PartPOneVoiceOne }
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsOne
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsTwo
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsThree
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsFour
-                \new Lyrics \lyricsto "PartPOneVoiceOne" \PartPOneVoiceOneLyricsFive
                 >>
             >>
         \new Staff <<
@@ -115,6 +113,11 @@ PartPFourVoiceOne =  \relative g {
             \set Staff.shortInstrumentName = "Т."
             \context Staff << 
                 \context Voice = "PartPTwoVoiceOne" { \PartPTwoVoiceOne }
+                \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPOneVoiceOneLyricsOne
+                \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPOneVoiceOneLyricsTwo
+                \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPOneVoiceOneLyricsThree
+                \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPOneVoiceOneLyricsFour
+                \new Lyrics \lyricsto "PartPTwoVoiceOne" \PartPOneVoiceOneLyricsFive
                 >>
             >>
         \new Staff <<
@@ -122,11 +125,6 @@ PartPFourVoiceOne =  \relative g {
             \set Staff.shortInstrumentName = "Бар."
             \context Staff << 
                 \context Voice = "PartPThreeVoiceOne" { \PartPThreeVoiceOne }
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsOne
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsTwo
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsThree
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsFour
-                \new Lyrics \lyricsto "PartPThreeVoiceOne" \PartPOneVoiceOneLyricsFive
                 >>
             >>
         \new Staff <<
