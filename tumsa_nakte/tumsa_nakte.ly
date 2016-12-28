@@ -88,11 +88,11 @@ PartPThreeVoiceOne =  \relative g {
 
 PartPFourVoiceOne =  \relative g {
     \clef "bass" \key bes \major \time 4/4 g4 es4 f4( f,8) f8 | % 2
-    g8 [( f8 g8 a8 )] bes4 bes4 | % 3
+    g8 [( f8)] g8[( a8 )] bes4 bes4 | % 3
     r2 g4 bes8 [( es8 )] | % 4
     bes4. bes8 bes8 a8 g8 g8 \break | % 5
-    c8 [( d8 )] es4 f4 es8 [( es8 )] | % 6
-    es8 [( d8 c8 g8 )] a4 bes4 | % 7
+    c8 [( d8 )] es4 f4( es8) es8  | % 6
+    es8 [( d8)] c8[( g8 )] a4 bes4 | % 7
     c4 g4 bes4( c8) c8  | % 8
     d4 es8 [( f8 )] g2 \bar "|."
     }
