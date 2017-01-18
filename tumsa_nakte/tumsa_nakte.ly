@@ -28,7 +28,7 @@
         }
     }
 PartPOneVoiceOne =  \relative g {
-    \clef "treble_8" \key as \major \time 4/4 f4 as8 [( des8 )] c4. bes8 | % 2
+    \clef "treble_8" \key f \minor \time 4/4 f4 as8 [( des8 )] c4. bes8 | % 2
     as4 bes4 f8 [( es8 )] f4 | % 3
     f4 as8 [( f'8 )] f4( es8)  des8 | % 4
     c4 c8 [( f8 )] es4( f8) c8 \break | % 5
@@ -67,7 +67,7 @@ PartPOneVoiceOneLyricsThree =  \lyricmode {  \set stanza = #"3. "
     -- "liņš." }
 PartPTwoVoiceOne =  \relative g {
     \tempo "Palēnām. Довольно медленно" 4 = 66
-    \clef "treble_8" \key as \major \time 4/4 f4 as4 g4. g8 | % 2
+    \clef "treble_8" \key f \minor \time 4/4 f4 as4 g4. g8 | % 2
     f4 f4 des4 c4 | % 3
     des4 f8 [( des'8 )] des4( as8) as8  | % 4
     as4 as4 as4( as8) as8 \break | % 5
@@ -78,7 +78,7 @@ PartPTwoVoiceOne =  \relative g {
     }
 
 PartPThreeVoiceOne =  \relative g {
-    \clef "bass" \key as \major \time 4/4 f4 f4 es4. des8 | % 2
+    \clef "bass" \key f \minor \time 4/4 f4 f4 es4. des8 | % 2
     c4 des4 bes4 c4 | % 3
     r2 as4 des8 [( f8 )] | % 4
     f4( es8)  des8  c8 c8 c8 f8 \break | % 5
@@ -89,7 +89,7 @@ PartPThreeVoiceOne =  \relative g {
     }
 
 PartPFourVoiceOne =  \relative g {
-    \clef "bass" \key as \major \time 4/4 f4 des4 es4( es,8) es8 | % 2
+    \clef "bass" \key f \minor \time 4/4 f4 des4 es4( es,8) es8 | % 2
     f8 [( es8)] f8[( g8 )] as4 as4 | % 3
     r2 f4 as8 [( des8 )] | % 4
     as4. as8 as8 g8 f8 f8 \break | % 5
