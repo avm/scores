@@ -28,21 +28,21 @@
         }
     }
 PartPOneVoiceOne =  \relative g {
-    \clef "treble_8" \key bes \major \time 4/4 g4 bes8 [( es8 )] d4. c8 | % 2
-    bes4 c4 g8 [( f8 )] g4 | % 3
-    g4 bes8 [( g'8 )] g4( f8)  es8 | % 4
-    d4 d8 [( g8 )] f4( g8) d8 \break | % 5
-    es8 [( d8 )] c4 d4. c8 | % 6
-    bes4 c4 g8 [( f8 )] g4 | % 7
-    g4 bes8 [( es8 )] d4. c8 | % 8
-    bes8 [( a8 )] c4 g2 \bar "|."
+    \clef "treble_8" \key as \major \time 4/4 f4 as8 [( des8 )] c4. bes8 | % 2
+    as4 bes4 f8 [( es8 )] f4 | % 3
+    f4 as8 [( f'8 )] f4( es8)  des8 | % 4
+    c4 c8 [( f8 )] es4( f8) c8 \break | % 5
+    des8 [( c8 )] bes4 c4. bes8 | % 6
+    as4 bes4 f8 [( es8 )] f4 | % 7
+    f4 as8 [( des8 )] c4. bes8 | % 8
+    as8 [( g8 )] bes4 f2 \bar "|."
     }
 
 PartPOneVoiceOneLyricsOne =  \lyricmode { 
     \set stanza = #"1. "
     "Tum" -- "ša" nak -- "te,"
     za -- "ļa" "zā" -- "le," lau -- "kā" lai -- du  ku -- me -- li --
-    ņis. Tum -- "ša" nak -- "te," za -- "ļa" za -- "le," lau -- "kā"
+    ņu. Tum -- "ša" nak -- "te," za -- "ļa" za -- "le," lau -- "kā"
     lai -- du ku -- me -- "liņ." }
 PartPOneVoiceOneLyricsTwo =  \lyricmode {
     \set stanza = #"2. "
@@ -54,7 +54,7 @@ PartPOneVoiceOneLyricsFour =  \lyricmode {  \set stanza = #"4. "
     "Mig" -- "la," mig -- "la,"
     lie -- la ra -- "sa," man pa -- zu -- da  ku -- me -- li --
     ņis.  Mig -- "la," mig -- "la," lie -- la ra -- "sa," man pa -- zu
-    -- da ku -- me -- "liņs." }
+    -- da ku -- me -- "liņš." }
 PartPOneVoiceOneLyricsFive =  \lyricmode {  \set stanza = #"5. "
     "Nok" -- "rīt" mig -- "la,"
     nok -- "rīt" ra -- "sa," es da -- "bū" -- ju ku -- me -- li
@@ -64,39 +64,39 @@ PartPOneVoiceOneLyricsThree =  \lyricmode {  \set stanza = #"3. "
     " Nu" ta -- "vā" -- i ro --
     ci -- "ņā" -- i ma -- nis la -- bis ku -- me -- li -- ņis. Nu
     ta -- "vā" -- i ro -- ci -- "ņā" -- i ma -- nis la -- bis ku -- me
-    -- "liņs." }
+    -- "liņš." }
 PartPTwoVoiceOne =  \relative g {
     \tempo "Palēnām. Довольно медленно" 4 = 66
-    \clef "treble_8" \key bes \major \time 4/4 g4 bes4 a4. a8 | % 2
-    g4 g4 es4 d4 | % 3
-    es4 g8 [( es'8 )] es4( bes8) bes8  | % 4
-    bes4 bes4 bes4( bes8) bes8 \break | % 5
-    bes4 bes4 a4. a8 | % 6
-    g4 g4 es4 d4 | % 7
-    g4 bes4 bes4( a8) a8 | % 8
-    g4 g8 [( a8 )] g2 \bar "|."
+    \clef "treble_8" \key as \major \time 4/4 f4 as4 g4. g8 | % 2
+    f4 f4 des4 c4 | % 3
+    des4 f8 [( des'8 )] des4( as8) as8  | % 4
+    as4 as4 as4( as8) as8 \break | % 5
+    as4 as4 g4. g8 | % 6
+    f4 f4 des4 c4 | % 7
+    f4 as4 as4( g8) g8 | % 8
+    f4 f8 [( g8 )] f2 \bar "|."
     }
 
 PartPThreeVoiceOne =  \relative g {
-    \clef "bass" \key bes \major \time 4/4 g4 g4 f4. es8 | % 2
-    d4 es4 c4 d4 | % 3
-    r2 bes4 es8 [( g8 )] | % 4
-    g4( f8)  es8  d8 d8 d8 g8 \break | % 5
-    g4 g4 f4. f8 | % 6
-    f4 es4 c4 d4 | % 7
-    es4 es4 f4( es8) es8 | % 8
-    d4 es8 [( f8 )] g2 \bar "|."
+    \clef "bass" \key as \major \time 4/4 f4 f4 es4. des8 | % 2
+    c4 des4 bes4 c4 | % 3
+    r2 as4 des8 [( f8 )] | % 4
+    f4( es8)  des8  c8 c8 c8 f8 \break | % 5
+    f4 f4 es4. es8 | % 6
+    es4 des4 bes4 c4 | % 7
+    des4 des4 es4( des8) des8 | % 8
+    c4 des8 [( es8 )] f2 \bar "|."
     }
 
 PartPFourVoiceOne =  \relative g {
-    \clef "bass" \key bes \major \time 4/4 g4 es4 f4( f,8) f8 | % 2
-    g8 [( f8)] g8[( a8 )] bes4 bes4 | % 3
-    r2 g4 bes8 [( es8 )] | % 4
-    bes4. bes8 bes8 a8 g8 g8 \break | % 5
-    c8 [( d8 )] es4 f4( es8) es8  | % 6
-    es8 [( d8)] c8[( g8 )] a4 bes4 | % 7
-    c4 g4 bes4( c8) c8  | % 8
-    d4 es8 [( f8 )] g2 \bar "|."
+    \clef "bass" \key as \major \time 4/4 f4 des4 es4( es,8) es8 | % 2
+    f8 [( es8)] f8[( g8 )] as4 as4 | % 3
+    r2 f4 as8 [( des8 )] | % 4
+    as4. as8 as8 g8 f8 f8 \break | % 5
+    bes8 [( c8 )] des4 es4( des8) des8  | % 6
+    des8 [( c8)] bes8[( f8 )] g4 as4 | % 7
+    bes4 f4 as4( bes8) bes8  | % 8
+    c4 des8 [( es8 )] f2 \bar "|."
     }
 
 
@@ -155,7 +155,7 @@ PartPFourVoiceOne =  \relative g {
             \hspace #2.0
             \column {
                 "Nu tavāi rociņāi manis labis kumeliņis."
-                "Nu tavāi rociņāi manis labis kumeliņs."
+                "Nu tavāi rociņāi manis labis kumeliņš."
             }
         }
         \hspace #1.0
@@ -163,7 +163,7 @@ PartPFourVoiceOne =  \relative g {
             \hspace #2.0
             \column {
                 "Migla, migla, liela rasa, man pazuda kumeliņis."
-                "Migla, migla, liela rasa, man pazuda kumeliņs."
+                "Migla, migla, liela rasa, man pazuda kumeliņš."
             }
         }
         \hspace #1.0
