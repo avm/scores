@@ -6,10 +6,13 @@ view: $(PIECE).pdf
 %.ly: %.satb
 	python ../satby.py <$< | cat -s >$@
 
-%.pdf: %.pdf.nosource %.ly
+%.pdf.noauthor: %.pdf.nosource %.ly
 	pdftk $< \
 		attach_files $(patsubst %.pdf,%.ly,$@) \
-	output - | pdftk - \
+		output $@
+
+%.pdf: %.pdf.noauthor
+	pdftk $< \
 		update_info ../editor.data \
 		output $@
 
