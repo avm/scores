@@ -136,8 +136,7 @@ PartPFourVoiceOne =  \relative g {
         
         >>
     \layout {}
-    % To create MIDI output, uncomment the following line:
-    %  \midi {}
+    \midi {}
     }
 \markup {
     \fontsize #1.5
