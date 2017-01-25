@@ -23,6 +23,9 @@ view: $(PIECE).pdf
 %.midi.csv: %.midi
 	midicsv $< | sed '/Program_c/s/52/16/' >$@
 
+channels: $(PIECE).midi.csv
+	grep Note_on $< | cut -d, -f1 | uniq
+
 track%.midi.csv: $(PIECE).midi.csv
 	grep -E '^(0,|.*(Tempo|Time_signature|Start_track|End_track)|$(patsubst track%.midi.csv,%,$@),)' $< >$@
 
