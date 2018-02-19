@@ -8,7 +8,7 @@ view: $(PIECE).pdf
 
 %.pdf.noauthor: %.pdf.nosource %.ly
 	pdftk $< \
-		attach_files $(patsubst %.pdf,%.ly,$@) \
+		attach_files $(patsubst %.pdf.noauthor,%.ly,$@) \
 		output $@
 
 %.pdf: %.pdf.noauthor
