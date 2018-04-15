@@ -21,7 +21,7 @@ view: $(PIECE).pdf
 	mv $(patsubst %.nosource,%,$@) $@
 
 %.midi.csv: %.midi
-	midicsv $< | sed '/Program_c/s/52/16/' >$@
+	midicsv $< | fgrep -v Lyric | sed '/Program_c/s/52/16/' >$@
 
 channels: $(PIECE).midi.csv
 	grep Note_on $< | cut -d, -f1 | uniq
