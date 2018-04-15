@@ -1429,8 +1429,7 @@ PartPFiveVoiceOneLyricsOne =  \lyricmode { "Я" "шёл" "под" "ла " __
             >>
         
         >>
-    \layout {}
-    % To create MIDI output, uncomment the following line:
-    %  \midi {}
+        \layout {}
+        \midi {}
     }
 
