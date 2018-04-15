@@ -383,6 +383,11 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { "Тя" "Е" -- "ди" -- "ну"
                 \override RestCollision #'positioning-done = #merge-rests-on-positioning
         }
     }
-    \midi {}
+    \midi {
+        \context {
+            \Score
+            midiChannelMapping = #'instrument
+        }
+    }
     }
 
