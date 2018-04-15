@@ -135,7 +135,7 @@ PartPTwoVoiceOne =  \relative d' {
     g8 ) g8 g4 fis4 ( | % 43
     g2. ~ | % 44
     g4. ) g8 g4 | % 45
-    g2 ( es8 [ f8 ] | % 46
+    g2 ( fis4 | % 46
     g4. ) g8 g4 | % 47
     g2. ( | % 48
     g4. ) g8 g4 ~ | % 49
