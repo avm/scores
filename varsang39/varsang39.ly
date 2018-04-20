@@ -1,6 +1,7 @@
 % headers {{{1
 \version "2.18.2"
 #(set-global-staff-size 20)
+#(load "../merge-rests.scm")
 \header {
     title = "№39. Vårsång"
     composer = "J. A. Josephson"
@@ -33,9 +34,9 @@ sopranoNotes = \relative g {
  d8. d16 d8 d[( cis]) b |  cis4( e8) e4 r8 |  fis8. \f fis16 fis8 e4 fis8 |
  \pageBreak
 
- e4( dis8) d4. |  cis8. b16 cis8 e4 d8 |  cis4.( b4) r8 |
- b8. b16 b8 b( cis) d |  e4. e |  f8. f16 f8 f4 f8 |  e2. |
- e8. e16 fis8 cis( d) b |  a4 r8 r4 r8 | a'2.~ |  a4.~ a8( gis) fis |  e2. |
+ e4( dis8) d4. |  cis8. b16 cis8 e4 d8 |  cis4.( b4) r8 | \break
+ b8. b16 b8 b( cis) d |  e4. e |  f8. f16 f8 f4 f8 |  e2. | \break
+ e8. e16 fis8 cis( d) b |  a4 r8 r4 r8 | a'2.~ |  a4.~ a8( gis) fis |  e2. | \break
  e4( eis8) fis4( gis,8) |  a4 r8 d8. d16 d8 |  cis4. bis |  cis e8. fis16 gis8 |  a2.~ |  a4. r4 r8
     \bar "|."
 }
@@ -56,6 +57,10 @@ altoNotes = \relative c' {
  d4.) d | cis4 r8 a8. a16 a8 |  a4. a |  a d8. d16 d8 |  <cis e>2.~ |  <cis e>4. r4 r8
 }
 
+baritoneRhytm = \relative c {
+  r4. a8. a16 a8 |  a2. |  cis4( a8) fis8( gis) a |  a4. ais
+}
+
 tenorNotes = \relative g {
     \global
     \voiceOne
@@ -68,7 +73,8 @@ tenorNotes = \relative g {
 
  fis4. e |  e8. d16 e8 fis4 fis8 |  e4.~ e4 r8 |
  fis8. fis16 fis8 e4 e8 |  e4. g |  a8. a16 a8 a4 a8 |  g4.( gis) |
- a8. a16 a8 e4 e8 |  fis4 r8 a8. a16 a8 |  a2. |  cis4( a8) fis8( gis) a |  a4.( ais |
+ a8. a16 a8 e4 e8 |  << { fis4 r8 a8. a16 a8 |  a2. |  cis4( a8) fis8( gis) a |  a4.( ais | }
+  \new NullVoice = "baritoneSolo" \baritoneRhytm >>
  b) b |  a4 r8 fis8. fis16 fis8 |  e4. dis |  e gis8. a16 b8 |  a2.~ |  a4. r
 }
 
@@ -100,18 +106,13 @@ commonLyrics = \lyricmode {
       Nic -- ka  vid  vän -- ligt  mö -- te,
       Sip -- por  ur  drif -- vans  skö -- te
       Lyf -- ta  sin  bly -- ga  krans,
-}
 
-bassLyrics = \lyricmode {
-      Vår -- li -- ga  vin -- dar  dra -- ga
-      Sky -- ar -- nes  dok  det  tun -- ga
-      Un -- dan  för  so -- lens  un -- ga  Blick
-      för  dess  strå -- lars  glans
-      
-      Jub -- lan -- de  lär -- kor  gla -- da
-      Nic -- ka  vid  vän -- ligt  mö -- te,
       Sip -- por  ur  drif -- vans  skö -- te
-      Lyf -- ta  sin  bly -- ga  krans,
+      lyf -- ta  sin  bly -- ga  krans,
+      lyf -- ta  sin  bly -- ga  krans,
+      lyf -- ta  sin  bly -- ga  krans,
+      lyf -- ta  sin  bly -- ga  krans,
+      lyf -- ta  sin  krans.
 }
 
 % score {{{1
@@ -122,13 +123,24 @@ bassLyrics = \lyricmode {
         \new Voice = "alto" \altoNotes
       >>
       \new Lyrics \lyricsto "soprano" \commonLyrics
-      \new Staff <<
+      \new Staff = "bassStaff" <<
         \new Voice = "tenor" \tenorNotes
         \new Voice = "bass" \bassNotes
       >>
-      \new Lyrics \lyricsto "bass" \bassLyrics
+      \new Lyrics \with { alignAboveContext = "bassStaff" }  {
+          \lyricsto "baritoneSolo" \lyricmode {
+              lyf -- ta sin krans, lyf -- ta sin bly "-"
+          }
+      }
+      \new Lyrics \lyricsto "bass" \commonLyrics
     >>
-    \layout {} \midi {
+    \layout {
+        \context {
+            \Staff
+                \override RestCollision #'positioning-done = #merge-rests-on-positioning
+        }
+    }
+    \midi {
         \context {
             \Score
             midiChannelMapping = #'instrument
