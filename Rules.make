@@ -1,3 +1,13 @@
+os := $(shell uname)
+
+ifeq ($(os),Darwin)
+mscore := /Applications/MuseScore\ 2.app/Contents/MacOS/mscore
+musicxml2ly := /Applications/LilyPond.app/Contents/Resources/bin/musicxml2ly
+else
+mscore := xvfb-run mscore
+musicxml2ly := musicxml2ly
+endif
+
 all: $(PIECE).pdf
 
 view: $(PIECE).pdf
@@ -22,6 +32,12 @@ view: $(PIECE).pdf
 
 %.midi.csv: %.midi
 	midicsv $< | fgrep -v Lyric | sed '/Program_c/s/52/16/' >$@
+
+%.autogen.xml: %.mscx
+	$(mscore) $< -o $@
+
+%.ly: %.xml
+	$(musicxml2ly) $< -m -o $@
 
 channels: $(PIECE).midi.csv
 	grep Note_on $< | cut -d, -f1 | uniq
