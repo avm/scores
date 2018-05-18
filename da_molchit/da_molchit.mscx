@@ -292,6 +292,11 @@
           <sigD>4</sigD>
           <showCourtesySig>1</showCourtesySig>
           </TimeSig>
+        <Dynamic>
+          <subtype>p</subtype>
+          <velocity>49</velocity>
+          <pos x="-1.81774" y="-2.29502"/>
+          </Dynamic>
         <Chord>
           <durationType>quarter</durationType>
           <Note>
@@ -408,6 +413,15 @@
             <tpc>18</tpc>
             </Note>
           </Chord>
+        <HairPin id="2">
+          <subtype>0</subtype>
+          <beginText>
+            <text>cresc.</text>
+            </beginText>
+          <continueText>
+            <text>(cresc.)</text>
+            </continueText>
+          </HairPin>
         <Chord>
           <durationType>quarter</durationType>
           <Note>
@@ -453,6 +467,11 @@
             <tpc>23</tpc>
             </Note>
           </Chord>
+        <Dynamic>
+          <subtype>mf</subtype>
+          <velocity>80</velocity>
+          </Dynamic>
+        <endSpanner id="2"/>
         <Chord>
           <durationType>half</durationType>
           <Note>
@@ -462,6 +481,10 @@
           </Chord>
         </Measure>
       <Measure number="3" len="11/2">
+        <Dynamic>
+          <subtype>p</subtype>
+          <velocity>49</velocity>
+          </Dynamic>
         <Chord>
           <durationType>quarter</durationType>
           <Note>
@@ -549,12 +572,16 @@
             <tpc>16</tpc>
             </Note>
           </Chord>
-        <Slur id="2">
+        <Dynamic>
+          <subtype>pp</subtype>
+          <velocity>33</velocity>
+          </Dynamic>
+        <Slur id="3">
           <track>0</track>
           </Slur>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="start" id="2"/>
+          <Slur type="start" id="3"/>
           <Note>
             <pitch>74</pitch>
             <tpc>16</tpc>
@@ -562,7 +589,7 @@
           </Chord>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="stop" id="2"/>
+          <Slur type="stop" id="3"/>
           <Note>
             <pitch>73</pitch>
             <tpc>21</tpc>
@@ -581,6 +608,10 @@
           </Rest>
         </Measure>
       <Measure number="4" len="5/1">
+        <Dynamic>
+          <subtype>f</subtype>
+          <velocity>96</velocity>
+          </Dynamic>
         <Chord>
           <durationType>half</durationType>
           <Note>
@@ -1234,7 +1265,7 @@
             <tpc>19</tpc>
             </Note>
           </Chord>
-        <Slur id="3">
+        <Slur id="4">
           <track>4</track>
           </Slur>
         <Chord>
@@ -1243,7 +1274,7 @@
             <syllabic>middle</syllabic>
             <text>шля</text>
             </Lyrics>
-          <Slur type="start" id="3"/>
+          <Slur type="start" id="4"/>
           <Note>
             <pitch>69</pitch>
             <tpc>17</tpc>
@@ -1251,7 +1282,7 @@
           </Chord>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="stop" id="3"/>
+          <Slur type="stop" id="4"/>
           <Note>
             <pitch>67</pitch>
             <tpc>15</tpc>
@@ -1853,12 +1884,12 @@
             <tpc>13</tpc>
             </Note>
           </Chord>
-        <Slur id="4">
+        <Slur id="5">
           <track>8</track>
           </Slur>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="start" id="4"/>
+          <Slur type="start" id="5"/>
           <Note>
             <pitch>65</pitch>
             <tpc>13</tpc>
@@ -1866,7 +1897,7 @@
           </Chord>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="stop" id="4"/>
+          <Slur type="stop" id="5"/>
           <Note>
             <pitch>64</pitch>
             <tpc>18</tpc>
@@ -2460,12 +2491,12 @@
             <tpc>16</tpc>
             </Note>
           </Chord>
-        <Slur id="5">
+        <Slur id="6">
           <track>12</track>
           </Slur>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="start" id="5"/>
+          <Slur type="start" id="6"/>
           <Note>
             <pitch>50</pitch>
             <tpc>16</tpc>
@@ -2473,7 +2504,7 @@
           </Chord>
         <Chord>
           <durationType>half</durationType>
-          <Slur type="stop" id="5"/>
+          <Slur type="stop" id="6"/>
           <Note>
             <pitch>49</pitch>
             <tpc>21</tpc>
