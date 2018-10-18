@@ -54,10 +54,11 @@ PartPOneVoiceOne =  \relative f' {
         c'4 bes4 a2 \break | % 23
         g4 f4 e4 d4 | % 24
         c4 f2 c4 | % 25
-        d4 bes4 ( c2 ) | % 26
-        c1 }
+        d4 bes4 ( c2 ) | } % 26
+        \alternative {
+        { c1 } {
     | % 27
-    c1 \bar "|." 
+    c1 } } \bar "|."
     }
 
 PartPOneVoiceOneLyricsOne =  \lyricmode { If ye love "me," keep my com
@@ -79,7 +80,7 @@ PartPTwoVoiceOne =  \relative c' {
     bes4 bes4 f'2 | % 11
     f4 c4 f4 e4 | % 12
     d4 ( bes4 c4. ) c8 | % 13
-    c2 r2 \pageBreak \repeat volta 2 {
+    c2 r2 \pageBreak % \repeat volta 2 {
         | % 14
         r2 ^\markup{ \italic {p 2nd time} } f2 | % 15
         bes2. a4 | % 16
@@ -93,7 +94,7 @@ PartPTwoVoiceOne =  \relative c' {
         e4 c'2 f,4 | % 24
         c'4 bes4 a4 g4 ~ | % 25
         g8 [ f8 ] f2 e4 | % 26
-        f1 }
+        f1 % }
     | % 27
     f1 \bar "|."
     }
@@ -119,7 +120,7 @@ PartPThreeVoiceOne =  \relative a {
     g4 g4 d'2 | % 11
     c4 a4 c2 ( | % 12
     bes8 [ a8 ) ] f4 g4. g8 | % 13
-    f2 c'2 \repeat volta 2 {
+    f2 c'2 % \repeat volta 2 {
         | % 14
         f2. e4 | % 15
         d4 c4 bes4 c4 | % 16
@@ -133,7 +134,7 @@ PartPThreeVoiceOne =  \relative a {
         c4 f,4 c'4 bes4 | % 24
         a4 d4 c4 g4 | % 25
         a4 f4 g4 g4 | % 26
-        c2 \p c2 }
+        c2 \p c2 % }
     | % 27
     c1 \bar "|."
     }
@@ -159,7 +160,7 @@ PartPFourVoiceOne =  \relative f {
     r4 g4 d4 d4 | % 11
     f2 f4 c4 | % 12
     d4 d4 c4 c4 | % 13
-    f2 r2 \repeat volta 2 {
+    f2 r2 % \repeat volta 2 {
         | % 14
         f2 ^\markup{ \italic {p 2nd time} } bes2 ~ | % 15
         bes4 a4 g4 f4 | % 16
@@ -173,7 +174,7 @@ PartPFourVoiceOne =  \relative f {
         r2 r4 f4 ~ | % 24
         f4 bes,4 f'4 e4 | % 25
         d4 d4 c4 c4 | % 26
-        f1 }
+        f1 % }
     | % 27
     f1 \bar "|."
     }
