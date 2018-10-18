@@ -6,8 +6,7 @@
     poet = "John 14: 15-17"
     encodingsoftware = "MuseScore 2.2.1"
     encodingdate = "2018-10-18"
-    composer = "Thomas Tallis (c 1505 - 1585)
-ed. Crookall"
+    composer = "Thomas Tallis (c. 1505—1585)"
     title = "If ye love me"
     }
 
@@ -45,7 +44,7 @@ PartPOneVoiceOne =  \relative f' {
         | % 14
         R1 | % 15
         R1 | % 16
-        r4 ^\markup{ \italic {p 2nd time} } f4 c'2 ~ | % 17
+        r4 ^\markup{ \italic { \dynamic {p} 2nd time} } f4 c'2 ~ | % 17
         c4 bes4 a4 g4 \break | % 18
         f4 a4 g2 | % 19
         g2 r2 | \barNumberCheck #20
@@ -82,7 +81,7 @@ PartPTwoVoiceOne =  \relative c' {
     d4 ( bes4 c4. ) c8 | % 13
     c2 r2 \pageBreak % \repeat volta 2 {
         | % 14
-        r2 ^\markup{ \italic {p 2nd time} } f2 | % 15
+        r2 ^\markup{ \dynamic p \italic { 2nd time} } f2 | % 15
         bes2. a4 | % 16
         g4 f4 f4 e4 | % 17
         f2 f4 c4 \break | % 18
@@ -162,7 +161,7 @@ PartPFourVoiceOne =  \relative f {
     d4 d4 c4 c4 | % 13
     f2 r2 % \repeat volta 2 {
         | % 14
-        f2 ^\markup{ \italic {p 2nd time} } bes2 ~ | % 15
+        f2 ^\markup{ \italic { \dynamic p 2nd time} } bes2 ~ | % 15
         bes4 a4 g4 f4 | % 16
         e4 f4 c2 | % 17
         f4 f4 f4 e4 \break | % 18
