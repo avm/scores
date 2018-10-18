@@ -87,7 +87,7 @@ EOM
 }
 
 for score in "$@"; do
-	mkdir "$score" \
+	mkdir -p "$score" \
 	&& create_makefile "$score" \
 	&& create_score "$score" \
 	|| exit 1
