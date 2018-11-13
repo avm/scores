@@ -10,7 +10,7 @@
     title = "If ye love me"
     }
 
-#(set-global-staff-size 19.9169291339)
+#(set-global-staff-size 19)
 \paper {
     paper-width = 21.0\cm
     paper-height = 29.7\cm
