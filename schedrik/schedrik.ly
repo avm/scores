@@ -37,9 +37,8 @@ solo = \markup { "Solo" }
 all = \markup { "All" }
 
 \header {
-  title = "Shchedryk"
-  composer = "Mykola Leontovych"
-  tagline = ""
+  title = "Щедрик"
+  composer = "Н. Леонтович"
 }
 
 \paper {
@@ -346,11 +345,6 @@ choirStaff = \new ChoirStaff <<
       \setLyricSize
       \sopWords
     }
-    \new Lyrics \lyricsto "sopranos" {
-      \setLyricSize
-      \override LyricText #'font-shape = #'italic
-      \sopTransWords
-    }
     \new Staff \with {
       instrumentName = \markup {\right-align "A"}
       \override StaffSymbol #'ledger-line-thickness = #'(0.4 . 0.1)
@@ -364,11 +358,6 @@ choirStaff = \new ChoirStaff <<
     \new Lyrics \lyricsto "altos" {
       \setLyricSize
       \altoWords
-    }
-    \new Lyrics \lyricsto "altos" {
-      \setLyricSize
-      \override LyricText #'font-shape = #'italic
-      \altoTransWords
     }
     \new Staff \with {
       instrumentName = \markup {\right-align "T"}
@@ -384,11 +373,6 @@ choirStaff = \new ChoirStaff <<
       \setLyricSize
       \tenorWords
     }
-    \new Lyrics \lyricsto "tenors" {
-      \setLyricSize
-      \override LyricText #'font-shape = #'italic
-      \tenorTransWords
-    }
     \new Staff \with {
       instrumentName = \markup {\right-align "B"}
       \override StaffSymbol #'ledger-line-thickness = #'(0.4 . 0.1)
@@ -403,33 +387,11 @@ choirStaff = \new ChoirStaff <<
       \setLyricSize
       \bassWords
     }
-    \new Lyrics \lyricsto "basses" {
-      \setLyricSize
-      \override LyricText #'font-shape = #'italic
-      \bassTransWords
-    }
   >>
 
 \score {
   \new GrandStaff <<
     \choirStaff
-    \new PianoStaff \with {
-      instrumentName = \markup \column { "Piano" \smaller "(for reh." \smaller "only)" }
-      \override StaffSymbol #'ledger-line-thickness = #'(0.4 . 0.1)
-    } <<
-      \new Staff {
-        \setStaffElements
-        \global \clef treble
-        <<\setNoteSize \turnOffMarkup \sopMusic \\
-          \setNoteSize \turnOffMarkup \altoMusic>>
-      }
-      \new Staff {
-        \setStaffElements
-        \global \clef bass
-        <<\setNoteSize \turnOffMarkup \tenorMusic \\
-          \setNoteSize \turnOffMarkup \bassMusic>>
-      }
-    >>
   >>
   \layout { }
 }
