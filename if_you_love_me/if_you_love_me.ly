@@ -169,7 +169,7 @@ PartPFourVoiceOne =  \relative f {
         c,2 r4 c'4 ~ | \barNumberCheck #20
         c4 f,4 c'4 bes4 | % 21
         a2 f4 a4 ~ | % 22
-        a8 [ f8 ( ] g4 ) f2 \break | % 23
+        a8 f8 ( g4 ) f2 \break | % 23
         r2 r4 f4 ~ | % 24
         f4 bes,4 f'4 e4 | % 25
         d4 d4 c4 c4 | % 26
@@ -182,7 +182,7 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { If ye love "me," keep my com
     -- mand -- "ments," and I will pray the Fa -- "ther," and he shall
     give you a -- no -- ther com -- for -- "ter," that he may bide with
     you for e -- "ver," may bide with you for e -- "ver," "e'en" the
-    "sp'rit" of "truth," the "sp'rit" "truth," "e'en" the "sp'rit" of
+    "sp'rit" of "truth," the "sp'rit" of "truth," "e'en" the "sp'rit" of
     "truth," the "sp'rit" of "truth," " truth." }
 
 % The score definition
