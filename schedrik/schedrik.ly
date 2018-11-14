@@ -1,34 +1,15 @@
 \version "2.16.2"
 \include "english.ly"
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 
 setStaffElements = {
-  \override Staff.Clef #'font-size = #-2
-  \override Staff.TimeSignature #'font-size = #-1
-  \override Staff.KeySignature #'font-size = #-1.5
-  \override Staff.BarLine #'hair-thickness = #1
-  \override Staff.BarLine #'thick-thickness = #5
-  \override Staff.MultiMeasureRest #'font-size = #-1.5
-}
-
-turnOffMarkup = {
-  \override DynamicText #'stencil = ##f
-  \override Script #'stencil = ##f
-  \override Hairpin #'stencil = ##f
-  \override TextScript #'stencil = ##f
 }
 
 setNoteSize = {
-  \override NoteHead #'font-size = #-1.5
-  \override Script #'font-size = #-1.5
-  \override Rest #'font-size = #-1.5
-  \override Accidental #'font-size = #-1.5
-  \override Dots #'font-size = #-1.5
-  \override DynamicText #'font-size = #-1
 }
 
-setLyricSize = { \override LyricText #'font-size = #-1.5 }
+setLyricSize = { }
 
 ten = \markup { \smaller \italic \halign #-0.5 "ten." }
 dim = \markup { \smaller \italic "dim." }
@@ -42,22 +23,15 @@ all = \markup { "All" }
 }
 
 \paper {
-  paper-width = 8.5\in
-  paper-height = 11\in
+  #(set-paper-size "a4")
   left-margin = 0.725\in
   right-margin = 0.725\in
   top-margin = 0.625\in
   bottom-margin = 0.625\in
   
-  markup-system-spacing #'basic-distance = #20
-  page-count = #3
-  max-systems-per-page = #2
   ragged-last-bottom = ##f
   
   % Define the three document fonts - serif, sans serif, and monospaced
-  #(define fonts
-     (make-pango-font-tree "Linux Libertine" "Luxi Sans" "Luxi Mono"
-       (/ staff-height pt 16)))
 }
 
 global = {
@@ -188,32 +162,32 @@ bassMusic = \relative c {
 }
 
 sopWords = \lyricmode {
-  Щед- рик щед- рик, щед- рi- воч- ка-,
-  при- лe- тi- ла ла- стi- воч- ка,
-  ста- ла со- бi ще- бе- та- ти,
-  гос- по- да- ря ви- кли- ка- ти:
+  Щед -- рик щед -- рик, щед -- рi -- воч -- ка,
+  при -- лe- тi -- ла ла -- стi -- воч -- ка,
+  ста -- ла со -- бi ще -- бе -- та -- ти,
+  гос -- по -- да -- ря ви -- кли -- ка -- ти:
   
-  «Вий- ди, вий- ди, гос- по- да- рю,
-  по- ди- ви- ся на ко- ша- ру,
-  там о- веч- ки по- ко- ти- лись,
-  а яг- нич- ки на- ро- ди- лись.
+  «Вий -- ди, вий -- ди, гос -- по -- да -- рю,
+  по -- ди -- ви -- ся на ко -- ша -- ру,
+  там о -- веч -- ки по -- ко -- ти -- лись,
+  а яг -- нич -- ки на -- ро -- ди -- лись.
   
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
   
-  в~те- бе жiн- ка чор- но- бро- ва,
-  хоч не гро- шей, то по- ло- ва,
-  в~те- бе жiн- ка чор- но- бро- ва.»
+  в_те -- бе жiн -- ка чор -- но -- бро -- ва,
+  хоч не гро -- шей, то по -- ло -- ва,
+  в_те -- бе жiн -- ка чор -- но -- бро -- ва.»
   
-  Щед- рик щед- рик,
+  Щед -- рик щед -- рик,
   M—
-  ла- стi- воч- ка.
+  ла -- стi -- воч -- ка.
 }
 sopTransWords = \lyricmode {
-  Shche- dryk shche- dryk, shche- dri- voch- ka,
-  pry- le- ti- la la- sti- voch- ka,
+  Shche- dryk shche- dryk, shche- dri -- voch- ka,
+  pry- le- ti -- la la- sti -- voch- ka,
   sta- la so- bi shche- be- ta- ty,
   hos- pod- ar- ya vyk- lyk- a- ty:
   
@@ -233,23 +207,23 @@ sopTransWords = \lyricmode {
   
   Shche- dryk shche- dryk,
   M—
-  la- sti- voch- ka.
+  la- sti -- voch- ka.
 }
 
 altoWords = \lyricmode {
-  ста- ла со- бi ще- бе- та- ти,
-  там о- веч- ки по- ко- ти- лись,
-  а яг- нич- ки на- ро- ди- лись.
+  ста -- ла со -- бi ще -- бе -- та -- ти,
+  там о -- веч -- ки по -- ко -- ти -- лись,
+  а яг -- нич -- ки на -- ро -- ди -- лись.
   
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
   
-  в~те- бе жiн- ка чор- но- бро- ва.
+  в_те -- бе жiн -- ка чор -- но -- бро -- ва.
   M—
   (m)—
-  ла- стi- воч- ка.
+  ла -- стi -- воч -- ка.
 }
 altoTransWords = \lyricmode {
   sta- la so- bi shche- be- ta- ty,
@@ -264,25 +238,25 @@ altoTransWords = \lyricmode {
   v~te- be zhin- ka chor- no- bro- va.
   M—
   (m)—
-  la- sti- voch- ka.
+  la- sti -- voch- ka.
 }
 
 tenorWords = \lyricmode {
-  ще- бе- та- ти,
-  там о- веч- ки по- ко- ти- лись,
-  а яг- нич- ки на- ро- ди- лись.
+  ще -- бе -- та -- ти,
+  там о -- веч -- ки по -- ко -- ти -- лись,
+  а яг -- нич -- ки на -- ро -- ди -- лись.
   
-  В~те- бе то- вар хо- ро- ший,
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
+  В_те -- бе то -- вар хо -- ро -- ший,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
   
-  хоч не гро- шей, то по- ло- ва,
-  в~те- бе жiн- ка чор- но- бро- ва.
+  хоч не гро -- шей, то по -- ло -- ва,
+  в_те -- бе жiн -- ка чор -- но -- бро -- ва.
   
   M—
   
-  Щед- рик щед- рик, щед- рi- воч- ка-,
-  при- лe- тi- ла
+  Щед -- рик щед -- рик, щед -- рi -- воч -- ка,
+  при -- лe- тi -- ла
 }
 tenorTransWords = \lyricmode {
   shche- be- ta- ty,
@@ -298,20 +272,20 @@ tenorTransWords = \lyricmode {
   
   M—
   
-  Shche- dryk shche- dryk, shche- dri- voch- ka,
-  pry- le- ti- la
+  Shche- dryk shche- dryk, shche- dri -- voch- ka,
+  pry- le- ti -- la
 }
 
 bassWords = \lyricmode {
-  там о- веч- ки по- ко- ти- лись,
-  а яг- нич- ки на- ро- ди- лись.
+  там о -- веч -- ки по -- ко -- ти -- лись,
+  а яг -- нич -- ки на -- ро -- ди -- лись.
   
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
-  В~те- бе то- вар весь хо- ро- ший,
-  бу- деш ма- ти мiр- ку гро- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
+  В_те -- бе то -- вар весь хо -- ро -- ший,
+  бу -- деш ма -- ти мiр -- ку гро -- шей,
   
-  в~те- бе жiн- ка.
+  в_те -- бе жiн -- ка.
   M—
   (m)—
 }
