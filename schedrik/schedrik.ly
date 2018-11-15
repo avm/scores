@@ -1,7 +1,7 @@
 \version "2.16.2"
 \include "english.ly"
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 setStaffElements = {
 }
@@ -11,9 +11,8 @@ setNoteSize = {
 
 setLyricSize = { }
 
-ten = \markup { \smaller \italic \halign #-0.5 "ten." }
-dim = \markup { \smaller \italic "dim." }
-rit = \markup { \smaller \italic "rit." }
+ten = \markup { \italic \halign #-0.5 "ten." }
+rit = \markup { \italic "rit." }
 solo = \markup { "Solo" }
 all = \markup { "All" }
 
@@ -40,12 +39,12 @@ global = {
 }
 
 sopMusic = \relative c'' {
-  bf4->-\mf^\solo a8 bf g4-\ten
+  bf4->-\mf^\solo a8 bf g4--
   \repeat volta 2 {
-    bf-> a8 bf g4-\ten
-    bf-\markup { \smaller\dynamic "pp" \italic\smaller "simile" }^\all a8 bf g4
+    bf-> a8 bf g4--
+    bf-\markup { \dynamic "pp" \italic "simile" }^\all a8 bf g4
     bf a8 bf g4
-    bf-\markup { \smaller\italic "poco cresc." } a8 bf g4
+    bf-\markup { \italic "poco cresc." } a8 bf g4
     bf a8 bf g4
     bf a8 bf g4
     bf a8 bf g4
@@ -69,7 +68,7 @@ sopMusic = \relative c'' {
     c^\>( d) c4 bf-\!
     d,8^\pp^\<( e fs g a bf-\!)
     c^\>( d) c4 bf-\!
-    bf4^\mp a8^\markup { \smaller\italic "poco a poco dim." } bf g4
+    bf4^\mp a8^\markup { \italic "poco a poco dim." } bf g4
     bf a8 bf g4
     bf a8 bf g4
     bf a8 bf g4
@@ -148,7 +147,7 @@ bassMusic = \relative c {
     g g8 g g4
     g g8 g g4-\!
     bf^>^\f a8-> bf-> g4->^\ten
-    bf^\markup { \smaller\italic "simile" } a8 bf g4
+    bf^\markup { \italic "simile" } a8 bf g4
     bf a8 bf g4
     bf^\dim a8 bf g4
     d2.^\mf d d~^\pp d2 ef4
@@ -222,7 +221,7 @@ altoWords = \lyricmode {
   
   в_те -- бе жiн -- ка чор -- но -- бро -- ва.
   M—
-  (m)—
+  (м)—
   ла -- стi -- воч -- ка.
 }
 altoTransWords = \lyricmode {
@@ -237,7 +236,7 @@ altoTransWords = \lyricmode {
   
   v~te- be zhin- ka chor- no- bro- va.
   M—
-  (m)—
+  (м)—
   la- sti -- voch- ka.
 }
 
@@ -287,7 +286,7 @@ bassWords = \lyricmode {
   
   в_те -- бе жiн -- ка.
   M—
-  (m)—
+  (м)—
 }
 bassTransWords = \lyricmode {
   tam o- vech- ky po- ko- ty- lys’,
@@ -300,10 +299,13 @@ bassTransWords = \lyricmode {
   
   v~te- be zhin- ka
   M—
-  (m)—
+  (м)—
 }
 
-choirStaff = \new ChoirStaff <<
+choirStaff = \new ChoirStaff \with {
+      \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    } <<
     \new Staff \with {
       instrumentName = \markup {\right-align "S"}
       \override StaffSymbol #'ledger-line-thickness = #'(0.4 . 0.1)
