@@ -31,7 +31,7 @@ view: $(PIECE).pdf
 	mv $(patsubst %.nosource,%,$@) $@
 
 %.midi.csv: %.midi
-	midicsv $< | fgrep -v Lyric | sed '/Program_c/s/52/16/' >$@
+	midicsv $< | fgrep -v Lyric | ../fixmidi.py >$@
 
 %.autogen.xml: %.mscx
 	$(mscore) $< -o $@
