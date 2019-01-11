@@ -1,7 +1,7 @@
 os := $(shell uname)
 
 ifeq ($(os),Darwin)
-mscore := /Applications/MuseScore\ 2.app/Contents/MacOS/mscore
+mscore := /Applications/MuseScore\ 3.app/Contents/MacOS/mscore
 musicxml2ly := /Applications/LilyPond.app/Contents/Resources/bin/musicxml2ly
 else
 mscore := xvfb-run mscore
