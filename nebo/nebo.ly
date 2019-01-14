@@ -22,8 +22,6 @@
 PartPOneVoiceOne =  \relative a' {
     \clef "treble" \key a \major \time 3/4
     \set StaffGroup.beamExceptions = #'()
-    \set StaffGroup.baseMoment = #(ly:make-moment 1/4)
-    \set StaffGroup.beatStructure = #'(1 1 1)
 
     \repeat volta 2 {
         \repeat volta 2 {
