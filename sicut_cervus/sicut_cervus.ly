@@ -73,7 +73,7 @@ global= {
 	\key f \major
 	\time 2/2
 	\tempo 2 = 55
-	\set Staff.midiInstrument = "choir aahs"
+	%\set Staff.midiInstrument = "choir aahs"
 	\accidentalStyle "forget"
 }
 
@@ -202,5 +202,5 @@ bassus = \new Voice {
 		piece = ""
 	}
 	\layout { }
-%	\midi {	}
+	\midi {	}
 }
