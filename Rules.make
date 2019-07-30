@@ -33,6 +33,9 @@ view: $(PIECE).pdf
 %.midi.csv: %.midi
 	midicsv $< | fgrep -v Lyric | ../fixmidi.py >$@
 
+%.mscz: %.mscx
+	$(mscore) $< -o $@
+
 %.autogen.xml: %.mscx
 	$(mscore) $< -o $@
 

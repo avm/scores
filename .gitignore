@@ -3,5 +3,8 @@
 */*.wav
 */*.mp3
 */*.midi
+*/*.midi.csv
 */*.zip
+*/*.mscz
+*/*.xml
 */sync
