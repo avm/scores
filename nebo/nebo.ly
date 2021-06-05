@@ -125,7 +125,7 @@ PartPThreeVoiceOne =  \relative e' {
         e4 e8 d8 cis8 d8 | \barNumberCheck #10
         e8. e16 e8 d8 cis8 d8 | % 11
         e8 e8 fis8 e8 d8 cis16 ( b16 ) | % 12
-        b8 ( cis8 ) cis2 }
+        b8 ( d8 ) cis2 }
     }
 
 PartPThreeVoiceOneLyricsOne =  \lyricmode { "Хрис" -- "тос" "ро" --
