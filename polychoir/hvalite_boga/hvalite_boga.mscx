@@ -328,7 +328,7 @@
             <durationType>eighth</durationType>
             <Lyrics>
               <syllabic>end</syllabic>
-              <text>тых</text>
+              <text>тых,</text>
               </Lyrics>
             <Spanner type="Slur">
               <Slur>
@@ -923,7 +923,7 @@
           <Chord>
             <durationType>half</durationType>
             <Lyrics>
-              <text>го</text>
+              <text>го,</text>
               </Lyrics>
             <Note>
               <pitch>67</pitch>
@@ -4151,7 +4151,7 @@
             <offset x="0.302381" y="-2.49825"/>
             </Dynamic>
           <StaffText>
-            <text><i><font size="12"/>     прежний темп</i></text>
+            <text><i><font size="12"></font>     прежний темп</i></text>
             </StaffText>
           <Chord>
             <durationType>quarter</durationType>
@@ -6180,6 +6180,23 @@
                 </location>
               </prev>
             </Spanner>
+          <Spanner type="HairPin">
+            <HairPin>
+              <subtype>1</subtype>
+              <placement>above</placement>
+              <Segment>
+                <subtype>0</subtype>
+                <offset x="0" y="-2.7499"/>
+                <off2 x="0" y="0"/>
+                <minDistance>0.5</minDistance>
+                </Segment>
+              </HairPin>
+            <next>
+              <location>
+                <measures>1</measures>
+                </location>
+              </next>
+            </Spanner>
           <Chord>
             <dots>1</dots>
             <durationType>half</durationType>
@@ -6227,6 +6244,13 @@
           <subtype>line</subtype>
           </LayoutBreak>
         <voice>
+          <Spanner type="HairPin">
+            <prev>
+              <location>
+                <measures>-1</measures>
+                </location>
+              </prev>
+            </Spanner>
           <Chord>
             <dots>1</dots>
             <durationType>half</durationType>
@@ -9958,8 +9982,8 @@
           <Chord>
             <durationType>quarter</durationType>
             <Note>
-              <pitch>74</pitch>
-              <tpc>16</tpc>
+              <pitch>72</pitch>
+              <tpc>14</tpc>
               </Note>
             </Chord>
           <Chord>
@@ -10396,8 +10420,7 @@
           <Chord>
             <durationType>half</durationType>
             <Lyrics>
-              <syllabic>begin</syllabic>
-              <text>Бог</text>
+              <text>Бог,</text>
               </Lyrics>
             <Note>
               <pitch>64</pitch>
@@ -10407,7 +10430,7 @@
           <Chord>
             <durationType>half</durationType>
             <Lyrics>
-              <syllabic>middle</syllabic>
+              <syllabic>begin</syllabic>
               <text>бла</text>
               </Lyrics>
             <Note>
