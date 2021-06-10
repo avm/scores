@@ -1,2 +1,2 @@
-PIECE=polychoir/hvalite_boga
-include ../Rules.make
+PIECE=hvalite_boga
+include ../../Rules.make
