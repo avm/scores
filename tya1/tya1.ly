@@ -131,7 +131,7 @@ PartPTwoVoiceOne =  \relative es' {
     g4. g8 g4 | % 14
     r4 bes4 bes4 | % 15
     bes2 bes4 \break | % 16
-    r4 bes4 \mf bes4 | % 17
+    r4 g4 \mf g4 | % 17
     f2 f4 | % 18
     r4 es2 | % 19
     r4 f2 | \barNumberCheck #20
