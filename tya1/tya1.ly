@@ -1,4 +1,3 @@
-
 \version "2.18.2"
 % automatically converted by musicxml2ly from tya1.autogen.xml
 
@@ -10,6 +9,7 @@
     }
 
 #(set-global-staff-size 18)
+\include "../merge-rests.ly"
 \paper {
     paper-width = 21.01\cm
     paper-height = 29.69\cm
@@ -377,6 +377,10 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { "Тя" "Е" -- "ди" -- "ну"
         
         >>
     \layout {
+        \context {
+            \Staff
+                \consists #merge-rests-engraver
+        }
     }
     \midi {
         \context {
