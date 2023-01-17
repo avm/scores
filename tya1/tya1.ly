@@ -10,7 +10,6 @@
     }
 
 #(set-global-staff-size 18)
-#(load "../merge-rests.scm")
 \paper {
     paper-width = 21.01\cm
     paper-height = 29.69\cm
@@ -92,7 +91,7 @@ PartPOneVoiceOne =  \relative g' {
     c2 \mp c4 \break | % 53
     d2 d4 | % 54
     es2 es4 | % 55
-    d2 c4 | % 56
+    d2 d4 | % 56
     es2 c4 \< | % 57
     c2. ~ | % 58
     c2 \! c4 | % 59
@@ -171,7 +170,7 @@ PartPTwoVoiceOne =  \relative es' {
     c2 as4 | % 54
     c2 c4 | % 55
     c2 as4 | % 56
-    as2 g4 | % 57
+    c2 g4 | % 57
     as2. ~ | % 58
     as2 as4 | % 59
     g2. ~ | \barNumberCheck #60
@@ -378,10 +377,6 @@ PartPFourVoiceOneLyricsOne =  \lyricmode { "Тя" "Е" -- "ди" -- "ну"
         
         >>
     \layout {
-        \context {
-            \Staff
-                \override RestCollision #'positioning-done = #merge-rests-on-positioning
-        }
     }
     \midi {
         \context {
